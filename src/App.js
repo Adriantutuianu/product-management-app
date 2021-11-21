@@ -1,17 +1,21 @@
 import React from "react";
 import "./antd.css";
+import { Layout } from "antd";
+
 import "./App.css";
-import { DatePicker } from "antd";
 import Footer from "./Footer";
 import Header from "./Header";
 
 function App() {
+  const { Content } = Layout;
+
   return (
     <div className="App">
-      <p style={{ color: "var(--primary-color)" }}>Hello!! </p>
-      <DatePicker />
-      <Header />
-      <Footer />
+      <Layout>
+        <Header />
+        <Content>Content</Content>
+        <Footer />
+      </Layout>
     </div>
   );
 }
