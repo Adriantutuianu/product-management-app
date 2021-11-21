@@ -9,6 +9,7 @@ function App() {
     <div className="App">
       <p style={{ color: "var(--primary-color)" }}>Hello!! </p>
       <DatePicker />
+      <Header />
       <Footer />
     </div>
   );
