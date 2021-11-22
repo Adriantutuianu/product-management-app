@@ -13,9 +13,7 @@ function App() {
     <div className="App">
       <Layout style={{ height: "100vh" }}>
         <Header />
-        <Content style={{ backgroundColor: "yellow", height: "100%" }}>
-          Content
-        </Content>
+        <Content style={{ height: "100%" }}>Content</Content>
         <Footer />
       </Layout>
     </div>
