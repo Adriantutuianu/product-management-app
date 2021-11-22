@@ -5,7 +5,11 @@ import "./header.css";
 const Header = () => {
   return (
     <header>
-      <Menu defaultSelectedKeys={["1"]} style={{ display: "flex" }}>
+      <Menu
+        className="header-menu"
+        defaultSelectedKeys={["1"]}
+        style={{ display: "flex" }}
+      >
         <Menu.Item key="1">Products</Menu.Item>
         <Menu.Item key="2">View Categories</Menu.Item>
         <Menu.Item key="3">Manage Users</Menu.Item>
