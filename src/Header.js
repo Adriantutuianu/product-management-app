@@ -1,6 +1,7 @@
 import React from "react";
 import { Menu } from "antd";
 import "./header.css";
+import Auth from "./Auth.js";
 
 const Header = () => {
   return (
@@ -16,6 +17,7 @@ const Header = () => {
         <Menu.Item key="3">Manage Users</Menu.Item>
         <Menu.Item key="4">About</Menu.Item>
       </Menu>
+      <Auth />
     </header>
   );
 };
