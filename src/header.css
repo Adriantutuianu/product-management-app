@@ -1,5 +1,6 @@
 header {
   height: 80px;
+  border-bottom: 1px solid black;
 }
 
 .header-menu {
@@ -11,4 +12,5 @@ header {
   align-items: center;
   height: 100%;
   margin: 0 !important;
+  border-right: 1px solid black;
 }
