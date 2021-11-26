@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import { Route, NavLink, HashRouter } from "react-router-dom";
+import React from "react";
+import { Route, HashRouter } from "react-router-dom";
 import "./antd.css";
 import "./App.css";
 import { Layout } from "antd";
