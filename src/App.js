@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, HashRouter } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./antd.css";
 import "./App.css";
 import { Layout } from "antd";
@@ -14,15 +14,22 @@ function App() {
   const { Content } = Layout;
 
   return (
-    <HashRouter>
+    <Router>
       <div className="App">
         <Layout style={{ height: "100vh" }}>
           <Header />
-          <Content style={{ height: "100%" }}>Content</Content>
+          {/* <Content style={{ height: "100%" }}>Content</Content> */}
+          <Routes>
+            <Route path="/" component={Products} />
+            <Route path="/categories" component={Categories} />
+            <Route path="/users" component={Users} />
+            <Route path="/about" component={About} />
+          </Routes>
+
           <Footer />
         </Layout>
       </div>
-    </HashRouter>
+    </Router>
   );
 }
 
