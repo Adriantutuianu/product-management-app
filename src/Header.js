@@ -4,11 +4,18 @@ import "./header.css";
 import Auth from "./auth/Auth.js";
 import { Link } from "react-router-dom";
 
+//
 const Header = () => {
   return (
     <header>
       <section style={{ display: "flex" }}>
-        <img src={process.env.PUBLIC_URL + "/logo192.png"} alt="Product logo" />
+        <Link to="/">
+          <img
+            style={{ height: "100%" }}
+            src={process.env.PUBLIC_URL + "/logo192.png"}
+            alt="Product logo"
+          />
+        </Link>
         <Menu
           className="header-menu"
           defaultSelectedKeys={["1"]}
