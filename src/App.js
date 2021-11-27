@@ -18,14 +18,14 @@ function App() {
       <div className="App">
         <Layout style={{ height: "100vh" }}>
           <Header />
-          {/* <Content style={{ height: "100%" }}>Content</Content> */}
-          <Routes>
-            <Route path="/" component={Products} />
-            <Route path="/categories" component={Categories} />
-            <Route path="/users" component={Users} />
-            <Route path="/about" component={About} />
-          </Routes>
-
+          <Content style={{ height: "100%" }}>
+            <Routes>
+              <Route path="/" element={<Products />} />
+              <Route path="/categories" element={<Categories />} />
+              <Route path="/users" element={<Users />} />
+              <Route path="/about" element={<About />} />
+            </Routes>
+          </Content>
           <Footer />
         </Layout>
       </div>
