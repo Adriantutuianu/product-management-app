@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./auth.css";
-import { Modal, Button } from "antd";
+import { Modal, Button, Input } from "antd";
 
 const Auth = () => {
   const [isModalVisible, setIsModalVisible] = useState(false);
@@ -23,14 +23,13 @@ const Auth = () => {
       </Button>
       ;
       <Modal
-        title="Basic Modal"
+        title="Login"
         visible={isModalVisible}
         onOk={handleOk}
         onCancel={handleCancel}
       >
-        <p>Some contents...</p>
-        <p>Some contents...</p>
-        <p>Some contents...</p>
+        <Input placeholder="Username" />
+        <Input placeholder="Password" />
       </Modal>
     </div>
   );
