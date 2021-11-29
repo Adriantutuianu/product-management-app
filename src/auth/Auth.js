@@ -37,13 +37,14 @@ const Auth = () => {
       <Button type="primary" onClick={showModal}>
         Login
       </Button>
-      ;
+
       <Modal
         title="Login"
         visible={isModalVisible}
         onOk={handleOk}
         onCancel={handleCancel}
         style={{ maxWidth: "300px" }}
+        okText={"Login"}
       >
         <Input
           placeholder="Username"
