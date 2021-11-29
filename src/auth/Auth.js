@@ -13,6 +13,7 @@ const Auth = () => {
   };
 
   const handleOk = () => {
+    loginUser();
     setIsModalVisible(false);
     setUsernameInputValue("");
     setPasswordInputValue("");
@@ -30,6 +31,22 @@ const Auth = () => {
 
   const onChangePassword = (e) => {
     setPasswordInputValue(e.target.value);
+  };
+
+  const loginUser = async () => {
+    try {
+      await fetch("https://fakestoreapi.com/auth/login", {
+        method: "POST",
+        body: JSON.stringify({
+          username: usernameInputValue,
+          password: passwordInputValue,
+        }),
+      })
+        .then((res) => res.json())
+        .then((json) => console.log(json));
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   return (
