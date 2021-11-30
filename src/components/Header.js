@@ -1,7 +1,7 @@
 import React from "react";
 import { Menu } from "antd";
 import "./header.css";
-import Auth from "./auth/Auth.js";
+import Auth from "../auth/Auth.js";
 import { Link } from "react-router-dom";
 
 //
