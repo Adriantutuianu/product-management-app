@@ -36,9 +36,8 @@ const Login = () => {
     try {
       await fetch(`${process.env.REACT_APP_BASE_URL}/auth/login`, {
         method: "POST",
-        mode: "cors",
         headers: {
-          "Access-Control-Allow-Origin": "*",
+          "Content-Type": "application/json",
         },
         body: JSON.stringify({
           username: usernameInputValue,
@@ -72,7 +71,7 @@ const Login = () => {
           style={{ marginBottom: "8px" }}
         />
         <Input.Password
-          placeholder="input password"
+          placeholder=" password"
           iconRender={(visible) =>
             visible ? <EyeTwoTone /> : <EyeInvisibleOutlined />
           }
