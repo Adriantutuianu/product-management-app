@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./auth.css";
 import { Modal, Button, Input } from "antd";
 import { EyeInvisibleOutlined, EyeTwoTone } from "@ant-design/icons";
+import Logout from "./Logout";
 
 const Auth = () => {
   const [isModalVisible, setIsModalVisible] = useState(false);
@@ -53,18 +54,12 @@ const Auth = () => {
     }
   };
 
-  const logout = () => {
-    console.log("You have been logged out!");
-  };
-
   return (
     <div className="auth">
       <Button type="primary" onClick={showModal}>
         Login
       </Button>
-      <Button type="primary" onClick={logout}>
-        Logout
-      </Button>
+      <Logout />
 
       <Modal
         title="Login"
