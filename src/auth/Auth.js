@@ -53,10 +53,17 @@ const Auth = () => {
     }
   };
 
+  const logout = () => {
+    console.log("You have been logged out!");
+  };
+
   return (
     <div className="auth">
       <Button type="primary" onClick={showModal}>
         Login
+      </Button>
+      <Button type="primary" onClick={logout}>
+        Logout
       </Button>
 
       <Modal
