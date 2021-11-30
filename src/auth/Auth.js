@@ -35,8 +35,12 @@ const Auth = () => {
 
   const loginUser = async () => {
     try {
-      await fetch("https://fakestoreapi.com/auth/login", {
+      await fetch(`${process.env.REACT_APP_BASE_URL}/auth/login`, {
         method: "POST",
+        mode: "cors",
+        headers: {
+          "Access-Control-Allow-Origin": "*",
+        },
         body: JSON.stringify({
           username: usernameInputValue,
           password: passwordInputValue,
