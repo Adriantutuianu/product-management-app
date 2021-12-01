@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Modal, Button, Input } from "antd";
+import { Modal, Button, Input, Typography } from "antd";
 import { EyeInvisibleOutlined, EyeTwoTone } from "@ant-design/icons";
 
 const Login = () => {
@@ -51,12 +51,15 @@ const Login = () => {
     }
   };
 
+  const { Paragraph } = Typography;
+
   return (
     <>
       <Button type="primary" onClick={showModal}>
         Login
       </Button>
       <Modal
+        className="login-modal"
         title="Login"
         visible={isModalVisible}
         onOk={handleOk}
@@ -71,13 +74,22 @@ const Login = () => {
           style={{ marginBottom: "8px" }}
         />
         <Input.Password
-          placeholder=" password"
+          placeholder=" Password"
           iconRender={(visible) =>
             visible ? <EyeTwoTone /> : <EyeInvisibleOutlined />
           }
           onChange={onChangePassword}
           value={passwordInputValue}
         />
+        <Paragraph
+          type="secondary"
+          style={{ fontSize: "8px", margin: "15px 0 0px" }}
+        >
+          We are using a fake API. You can use the following credentials:
+        </Paragraph>
+        <Paragraph type="secondary" style={{ fontSize: "8px" }}>
+          User: johnd / Password: m38rmF$
+        </Paragraph>
       </Modal>
     </>
   );
