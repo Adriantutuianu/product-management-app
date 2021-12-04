@@ -1,4 +1,4 @@
-import React from "react";
+import { React, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./antd.css";
 import "./App.css";
@@ -12,6 +12,22 @@ import About from "./routes/About";
 
 function App() {
   const { Content } = Layout;
+
+  useEffect(() => {
+    getProducts(products);
+  }, []);
+
+  const getProducts = async (path) => {
+    try {
+      await fetch(path)
+        .then((res) => res.json())
+        .then((json) => console.log(json));
+    } catch (error) {
+      console.log("Failed to get all products: " + error);
+    }
+  };
+
+  const products = "https://fakestoreapi.com/products";
 
   return (
     <Router>
