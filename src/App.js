@@ -14,7 +14,7 @@ function App() {
   const { Content } = Layout;
 
   useEffect(() => {
-    getProducts(products);
+    getProducts(endpoint);
   }, []);
 
   const getProducts = async (path) => {
@@ -27,7 +27,7 @@ function App() {
     }
   };
 
-  const products = "https://fakestoreapi.com/products";
+  const endpoint = "https://fakestoreapi.com/products";
 
   return (
     <Router>
