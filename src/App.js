@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./antd.css";
 import "./App.css";
-import { Layout } from "antd";
+import { Layout, Table } from "antd";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Products from "./routes/Products";
@@ -33,7 +33,7 @@ function App() {
   };
 
   const endpoint = "https://fakestoreapi.com/products";
-  console.log(products);
+  <Table getProducts={products} />;
 
   return (
     <Router>
