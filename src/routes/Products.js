@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Table } from "antd";
+import { Table, Button } from "antd";
 
 const Products = () => {
   const [products, setProducts] = useState([]);
@@ -49,15 +49,34 @@ const Products = () => {
     },
   ];
 
+  const handleClickCategoriesFilter = () => {
+    console.log("Button was clicked!");
+  };
+  const handleClickNewProduct = () => {
+    console.log("Button was clicked!");
+  };
+  const handleClickUpdateProduct = () => {
+    console.log("Button was clicked!");
+  };
+
   return (
-    <div>
+    <>
+      <>
+        <section className="filter-actions" style={{ display: "flex" }}>
+          <h3>Filters & actions</h3>
+          <Button onClick={handleClickCategoriesFilter}>
+            Categories filter
+          </Button>
+          <Button onClick={handleClickNewProduct}>Create new product</Button>
+          <Button onClick={handleClickUpdateProduct}>Update product</Button>
+        </section>
+      </>
       <Table
         dataSource={products}
         columns={columns}
         pagination={{ pageSize: 20 }}
       />
-      ;
-    </div>
+    </>
   );
 };
 
