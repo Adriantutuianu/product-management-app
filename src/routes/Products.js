@@ -51,7 +51,12 @@ const Products = () => {
 
   return (
     <div>
-      <Table dataSource={products} columns={columns} />;
+      <Table
+        dataSource={products}
+        columns={columns}
+        pagination={{ pageSize: 20 }}
+      />
+      ;
     </div>
   );
 };
