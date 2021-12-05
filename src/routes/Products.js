@@ -65,11 +65,15 @@ const Products = () => {
       <>
         <section className="filters-actions">
           <h3>Filters & actions</h3>
-          <Button onClick={handleClickCategoriesFilter}>
+          <Button type="round" onClick={handleClickCategoriesFilter}>
             Categories filter
           </Button>
-          <Button onClick={handleClickNewProduct}>Create new product</Button>
-          <Button onClick={handleClickUpdateProduct}>Update product</Button>
+          <Button type="round" onClick={handleClickNewProduct}>
+            Create new product
+          </Button>
+          <Button type="round" onClick={handleClickUpdateProduct}>
+            Update product
+          </Button>
         </section>
       </>
       <Table
