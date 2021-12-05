@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Table, Button } from "antd";
+import "./products.css";
 
 const Products = () => {
   const [products, setProducts] = useState([]);
@@ -62,7 +63,7 @@ const Products = () => {
   return (
     <>
       <>
-        <section className="filter-actions" style={{ display: "flex" }}>
+        <section className="filters-actions">
           <h3>Filters & actions</h3>
           <Button onClick={handleClickCategoriesFilter}>
             Categories filter
