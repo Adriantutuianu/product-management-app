@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Table } from "antd";
 
 const Products = () => {
-  const [products, setProducts] = useState({});
+  const [products, setProducts] = useState([]);
 
   useEffect(() => {
     //get product onload
@@ -14,7 +14,9 @@ const Products = () => {
       await fetch(path)
         .then((res) => res.json())
         .then((res) => {
-          setProducts(res);
+          // fix for unique key for each item.
+          const resWithKey = res.map((obj) => ({ ...obj, key: obj.id }));
+          setProducts(resWithKey);
         });
     } catch (error) {
       console.log("Failed to get all products: " + error);
@@ -23,24 +25,6 @@ const Products = () => {
 
   const endpoint = "https://fakestoreapi.com/products";
   console.log(products);
-
-  const dataSource = [
-    {
-      key: "1",
-      title: "Mike",
-      id: 32,
-      category: "10 Downing Street",
-      price: "100$",
-    },
-
-    {
-      key: "2",
-      title: "Mike",
-      id: 32,
-      category: "10 Downing Street",
-      price: "100$",
-    },
-  ];
 
   const columns = [
     {
@@ -67,7 +51,7 @@ const Products = () => {
 
   return (
     <div>
-      <Table dataSource={dataSource} columns={columns} />;
+      <Table dataSource={products} columns={columns} />;
     </div>
   );
 };
