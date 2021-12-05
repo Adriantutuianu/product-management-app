@@ -73,6 +73,7 @@ const Products = () => {
         </section>
       </>
       <Table
+        className="products-table"
         dataSource={products}
         columns={columns}
         pagination={{ pageSize: 20 }}

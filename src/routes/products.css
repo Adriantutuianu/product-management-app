@@ -1,4 +1,13 @@
 .filters-actions {
-  display: flex;
-  margin-bottom: 80px;
+  margin: 30px 0 30px 20px;
+  border: 1px solid black;
+}
+
+.filters-actions .ant-btn {
+  margin: 0 15px 15px 15px;
+}
+
+.products-table {
+  margin-left: 20px;
+  border: 1px solid black;
 }
