@@ -7,7 +7,7 @@ const Products = () => {
 
   useEffect(() => {
     //get product onload
-    getProducts(endpoint);
+    getProducts(productsEndpoint);
   }, []);
 
   const getProducts = async (path) => {
@@ -24,7 +24,7 @@ const Products = () => {
     }
   };
 
-  const endpoint = "https://fakestoreapi.com/products";
+  const productsEndpoint = "https://fakestoreapi.com/products";
   console.log(products);
 
   const columns = [
@@ -51,31 +51,30 @@ const Products = () => {
   ];
 
   const handleClickCategoriesFilter = () => {
-    console.log("Button was clicked!");
+    console.log("Categories Filter Button was clicked!");
   };
   const handleClickNewProduct = () => {
-    console.log("Button was clicked!");
+    console.log("New Product Button was clicked!");
   };
   const handleClickUpdateProduct = () => {
-    console.log("Button was clicked!");
+    console.log("Update product Button was clicked!");
   };
 
   return (
     <>
-      <>
-        <section className="filters-actions">
-          <h3>Filters & actions</h3>
-          <Button type="round" onClick={handleClickCategoriesFilter}>
-            Categories filter
-          </Button>
-          <Button type="round" onClick={handleClickNewProduct}>
-            Create new product
-          </Button>
-          <Button type="round" onClick={handleClickUpdateProduct}>
-            Update product
-          </Button>
-        </section>
-      </>
+      <section className="filters-actions">
+        <h3>Filters & actions</h3>
+        <Button type="round" onClick={handleClickCategoriesFilter}>
+          Categories filter
+        </Button>
+        <Button type="round" onClick={handleClickNewProduct}>
+          Create new product
+        </Button>
+        <Button type="round" onClick={handleClickUpdateProduct}>
+          Update product
+        </Button>
+      </section>
+
       <Table
         className="products-table"
         dataSource={products}
