@@ -80,7 +80,7 @@ const Products = () => {
         className="products-table"
         dataSource={products}
         columns={columns}
-        pagination={{ pageSize: 20 }}
+        pagination={{ pageSize: 10 }}
       />
     </>
   );
