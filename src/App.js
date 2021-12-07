@@ -16,7 +16,7 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <Layout style={{ height: "100vh" }}>
+        <Layout style={{ minHeight: "100vh" }}>
           <Header />
           <Content style={{ height: "100%" }}>
             <Routes>

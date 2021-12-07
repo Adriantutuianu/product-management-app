@@ -1,6 +1,6 @@
 .filters-actions {
   margin: 30px 5px 30px 5px;
-  border-radius: 15px;
+  border-radius: 8px;
   border: 1px solid var(--primary-color);
   padding: 10px;
   height: 120px;
@@ -14,16 +14,20 @@
 .products-table {
   margin: 5px 5px 20px 5px;
   border: 1px solid var(--primary-color);
-  border-radius: 15px;
+  border-radius: 8px;
 }
 
 .ant-table-thead > tr > th,
 .ant-table-tbody > tr > td,
 .ant-table tfoot > tr > th,
 .ant-table tfoot > tr > td {
-  padding: 1px;
+  padding: 3px;
   text-align: center;
-  border: 1px solid var(--primary-color);
+}
+
+.ant-table-thead > tr > th {
+  border-bottom: 1px solid var(--primary-color);
+  border-right: 1px solid var(--primary-color);
 }
 
 .ant-table-thead {
@@ -31,9 +35,10 @@
 }
 
 .ant-table-container table > thead > tr:first-child th:first-child {
-  border-top-left-radius: 15px;
+  border-top-left-radius: 8px;
 }
 
 .ant-table-container table > thead > tr:first-child th:last-child {
-  border-top-right-radius: 15px;
+  border-top-right-radius: 8px;
+  border-right: none;
 }
