@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { Table } from "antd";
 import "./products.css";
 import FiltersSection from "../components/productsPage/FiltersSection";
+import ProductsTable from "../components/productsPage/ProductsTable";
 
 const Products = () => {
   const [products, setProducts] = useState([]);
@@ -28,29 +28,6 @@ const Products = () => {
   const productsEndpoint = "https://fakestoreapi.com/products";
   console.log(products);
 
-  const columns = [
-    {
-      title: "Id",
-      dataIndex: "id",
-      key: "id",
-    },
-    {
-      title: "Title",
-      dataIndex: "title",
-      key: "title",
-    },
-    {
-      title: "Category",
-      dataIndex: "category",
-      key: "category",
-    },
-    {
-      title: "Price",
-      dataIndex: "price",
-      key: "price",
-    },
-  ];
-
   const handleClickCategoriesFilter = () => {
     console.log("Categories Filter Button was clicked!");
   };
@@ -70,12 +47,7 @@ const Products = () => {
           handleClickUpdateProduct,
         }}
       />
-      <Table
-        className="products-table"
-        dataSource={products}
-        columns={columns}
-        pagination={{ pageSize: 20 }}
-      />
+      <ProductsTable productsProp={products} />
     </>
   );
 };
