@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { Table, Button, Typography } from "antd";
+import { Table } from "antd";
 import "./products.css";
+import FiltersSection from "../components/productsPage/FiltersSection";
 
 const Products = () => {
   const [products, setProducts] = useState([]);
-
-  const { Title } = Typography;
 
   useEffect(() => {
     //get product onload
@@ -64,19 +63,13 @@ const Products = () => {
 
   return (
     <>
-      <section className="filters-actions">
-        <Title level={5}>Filters & actions</Title>
-        <Button type="primary" onClick={handleClickCategoriesFilter}>
-          Categories filter
-        </Button>
-        <Button type="primary" onClick={handleClickNewProduct}>
-          Create new product
-        </Button>
-        <Button type="primary" onClick={handleClickUpdateProduct}>
-          Update product
-        </Button>
-      </section>
-
+      <FiltersSection
+        methods={{
+          handleClickCategoriesFilter,
+          handleClickNewProduct,
+          handleClickUpdateProduct,
+        }}
+      />
       <Table
         className="products-table"
         dataSource={products}
