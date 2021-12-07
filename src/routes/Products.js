@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
-import { Table, Button } from "antd";
+import { Table, Button, Typography } from "antd";
 import "./products.css";
 
 const Products = () => {
   const [products, setProducts] = useState([]);
+
+  const { Title } = Typography;
 
   useEffect(() => {
     //get product onload
@@ -63,14 +65,14 @@ const Products = () => {
   return (
     <>
       <section className="filters-actions">
-        <h3>Filters & actions</h3>
-        <Button type="round" onClick={handleClickCategoriesFilter}>
+        <Title level={5}>Filters & actions</Title>
+        <Button type="primary" onClick={handleClickCategoriesFilter}>
           Categories filter
         </Button>
-        <Button type="round" onClick={handleClickNewProduct}>
+        <Button type="primary" onClick={handleClickNewProduct}>
           Create new product
         </Button>
-        <Button type="round" onClick={handleClickUpdateProduct}>
+        <Button type="primary" onClick={handleClickUpdateProduct}>
           Update product
         </Button>
       </section>
