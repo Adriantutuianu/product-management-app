@@ -9,6 +9,7 @@ const Products = () => {
   useEffect(() => {
     //get product onload
     getProducts(productsEndpoint);
+    getCategories(categoriesEndpoint);
   }, []);
 
   const getProducts = async (path) => {
@@ -25,8 +26,20 @@ const Products = () => {
     }
   };
 
+  const getCategories = async (path) => {
+    try {
+      await fetch(path)
+        .then((res) => res.json())
+        .then((res) => {
+          console.log(res);
+        });
+    } catch (error) {
+      console.log("Failed to get all products: " + error);
+    }
+  };
+
   const productsEndpoint = "https://fakestoreapi.com/products";
-  console.log(products);
+  const categoriesEndpoint = "https://fakestoreapi.com/products/categories";
 
   const handleClickCategoriesFilter = () => {
     console.log("Categories Filter Button was clicked!");
