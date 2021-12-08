@@ -12,7 +12,9 @@ const FiltersSection = ({ methods, categories }) => {
   } = methods;
 
   const menuItems = categories.map((category, index) => (
-    <Menu.Item key={index}>{category}</Menu.Item>
+    <Menu.Item key={index} style={{ textTransform: "capitalize" }}>
+      {category}
+    </Menu.Item>
   ));
 
   const categoriesMenu = <Menu>{menuItems}</Menu>;
