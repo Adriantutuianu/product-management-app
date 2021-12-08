@@ -2,8 +2,9 @@ import React from "react";
 import { Button, Typography, Menu, Dropdown } from "antd";
 import { DownOutlined } from "@ant-design/icons";
 
-const FiltersSection = ({ methods }) => {
+const FiltersSection = ({ methods, categories }) => {
   const { Title } = Typography;
+  console.log(categories);
 
   const {
     handleClickCategoriesFilter,

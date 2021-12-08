@@ -60,6 +60,7 @@ const Products = () => {
           handleClickNewProduct,
           handleClickUpdateProduct,
         }}
+        categories={categories}
       />
       <ProductsTable productsProp={products} />
     </>
