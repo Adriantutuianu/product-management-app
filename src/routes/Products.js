@@ -5,6 +5,7 @@ import ProductsTable from "../components/productsPage/ProductsTable";
 
 const Products = () => {
   const [products, setProducts] = useState([]);
+  const [categories, setCategories] = useState([]);
 
   useEffect(() => {
     //get product onload
@@ -31,7 +32,7 @@ const Products = () => {
       await fetch(path)
         .then((res) => res.json())
         .then((res) => {
-          console.log(res);
+          setCategories(res);
         });
     } catch (error) {
       console.log("Failed to get all products: " + error);
