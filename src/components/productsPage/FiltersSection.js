@@ -1,5 +1,6 @@
 import React from "react";
-import { Button, Typography } from "antd";
+import { Button, Typography, Menu, Dropdown } from "antd";
+import { DownOutlined } from "@ant-design/icons";
 
 const FiltersSection = ({ methods }) => {
   const { Title } = Typography;
@@ -10,12 +11,33 @@ const FiltersSection = ({ methods }) => {
     handleClickUpdateProduct,
   } = methods;
 
+  const categoriesMenu = (
+    <Menu>
+      <Menu.Item key="0">
+        <a href="https://www.antgroup.com">1st menu item</a>
+      </Menu.Item>
+      <Menu.Item key="1">
+        <a href="https://www.aliyun.com">2nd menu item</a>
+      </Menu.Item>
+      <Menu.Divider />
+      <Menu.Item key="3">3rd menu item</Menu.Item>
+    </Menu>
+  );
+
   return (
     <section className="filters-actions">
       <Title level={5}>Filters & actions</Title>
-      <Button type="primary" onClick={handleClickCategoriesFilter}>
-        Categories filter
-      </Button>
+
+      <Dropdown overlay={categoriesMenu} trigger={["click"]}>
+        <a
+          href="cat"
+          className="ant-dropdown-link"
+          onClick={(e) => e.preventDefault()}
+        >
+          Categories filter <DownOutlined />
+        </a>
+      </Dropdown>
+
       <Button type="primary" onClick={handleClickNewProduct}>
         Create new product
       </Button>
