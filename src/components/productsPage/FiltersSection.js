@@ -4,7 +4,6 @@ import { DownOutlined } from "@ant-design/icons";
 
 const FiltersSection = ({ methods, categories }) => {
   const { Title } = Typography;
-  console.log(categories);
 
   const {
     handleClickCategoriesFilter,
@@ -12,18 +11,11 @@ const FiltersSection = ({ methods, categories }) => {
     handleClickUpdateProduct,
   } = methods;
 
-  const categoriesMenu = (
-    <Menu>
-      <Menu.Item key="0">
-        <a href="https://www.antgroup.com">1st menu item</a>
-      </Menu.Item>
-      <Menu.Item key="1">
-        <a href="https://www.aliyun.com">2nd menu item</a>
-      </Menu.Item>
-      <Menu.Divider />
-      <Menu.Item key="3">3rd menu item</Menu.Item>
-    </Menu>
-  );
+  const menuItems = categories.map((category, index) => (
+    <Menu.Item key={index}>{category}</Menu.Item>
+  ));
+
+  const categoriesMenu = <Menu>{menuItems}</Menu>;
 
   return (
     <section className="filters-actions">
