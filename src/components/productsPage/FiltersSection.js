@@ -12,7 +12,11 @@ const FiltersSection = ({ methods, categories }) => {
   } = methods;
 
   const menuItems = categories.map((category, index) => (
-    <Menu.Item key={index} style={{ textTransform: "capitalize" }}>
+    <Menu.Item
+      key={index}
+      onClick={(e) => handleClickCategoriesFilter(e)}
+      style={{ textTransform: "capitalize" }}
+    >
       {category}
     </Menu.Item>
   ));

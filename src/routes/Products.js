@@ -7,6 +7,11 @@ const Products = () => {
   const [products, setProducts] = useState([]);
   const [categories, setCategories] = useState([]);
 
+  const productsEndpoint = "https://fakestoreapi.com/products";
+  const categoriesEndpoint = "https://fakestoreapi.com/products/categories";
+  const productsEndpointWithCategory =
+    "https://fakestoreapi.com/products/category/jewelery";
+
   useEffect(() => {
     //get product onload
     getProducts(productsEndpoint);
@@ -38,9 +43,6 @@ const Products = () => {
       console.log("Failed to get all products: " + error);
     }
   };
-
-  const productsEndpoint = "https://fakestoreapi.com/products";
-  const categoriesEndpoint = "https://fakestoreapi.com/products/categories";
 
   const handleClickCategoriesFilter = () => {
     console.log("Categories Filter Button was clicked!");
