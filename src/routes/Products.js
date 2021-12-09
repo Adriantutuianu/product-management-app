@@ -9,12 +9,9 @@ const Products = () => {
 
   const productsEndpoint = "https://fakestoreapi.com/products";
   const categoriesEndpoint = "https://fakestoreapi.com/products/categories";
-  const productsEndpointWithCategory =
-    "https://fakestoreapi.com/products/category/jewelery";
 
   useEffect(() => {
     //get product onload
-    getProducts(productsEndpoint);
     getCategories(categoriesEndpoint);
   }, []);
 
@@ -44,8 +41,12 @@ const Products = () => {
     }
   };
 
-  const handleClickCategoriesFilter = () => {
-    console.log("Categories Filter Button was clicked!");
+  const handleClickCategoriesFilter = (e) => {
+    const category = "electronics"; //TODO: replace with the actual category.
+    const productsEndpointWithCategory = `https://fakestoreapi.com/products/category/${category}`;
+    getProducts(productsEndpointWithCategory);
+
+    console.log(e);
   };
   const handleClickNewProduct = () => {
     console.log("New Product Button was clicked!");
