@@ -11,17 +11,23 @@ const FiltersSection = ({ methods, categories }) => {
     handleClickUpdateProduct,
   } = methods;
 
+  // dynamic menu options
   const menuItems = categories.map((category, index) => (
-    <Menu.Item
-      key={index}
-      onClick={(e) => handleClickCategoriesFilter(e)}
-      style={{ textTransform: "capitalize" }}
-    >
+    <Menu.Item key={index} style={{ textTransform: "capitalize" }}>
       {category}
     </Menu.Item>
   ));
 
-  const categoriesMenu = <Menu>{menuItems}</Menu>;
+  // passing selected value to function that will fetch all products that contain a specific category
+  const categoriesMenu = (
+    <Menu
+      onClick={({ domEvent }) =>
+        handleClickCategoriesFilter(domEvent.target.textContent)
+      }
+    >
+      {menuItems}
+    </Menu>
+  );
 
   return (
     <section className="filters-actions">
