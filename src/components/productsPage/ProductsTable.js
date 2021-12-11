@@ -25,9 +25,27 @@ const ProductsTable = ({ productsProp }) => {
     },
   ];
 
+  const rowSelection = {
+    onChange: (selectedRowKeys, selectedRows) => {
+      console.log(
+        `selectedRowKeys: ${selectedRowKeys}`,
+        "selectedRows: ",
+        selectedRows
+      );
+    },
+    getCheckboxProps: (record) => ({
+      disabled: record.name === "Disabled User",
+      // Column configuration not to be checked
+      name: record.name,
+    }),
+  };
+
   return (
     <Table
       className="products-table"
+      rowSelection={{
+        type: rowSelection,
+      }}
       dataSource={productsProp}
       columns={columns}
       pagination={{ pageSize: 20 }}
