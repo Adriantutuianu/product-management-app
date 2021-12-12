@@ -6,6 +6,7 @@ import ProductsTable from "../components/productsPage/ProductsTable";
 const Products = () => {
   const [products, setProducts] = useState([]);
   const [categories, setCategories] = useState([]);
+  const [selectRows, setSelectRows] = useState([]);
 
   const productsEndpoint = "https://fakestoreapi.com/products";
   const categoriesEndpoint = "https://fakestoreapi.com/products/categories";
@@ -51,6 +52,7 @@ const Products = () => {
     console.log("New Product Button was clicked!");
   };
   const handleClickUpdateProduct = () => {
+    //TODO: pass selected rows data to a drawer-antd.
     console.log("Update product Button was clicked!");
   };
 
@@ -64,7 +66,7 @@ const Products = () => {
         }}
         categories={categories}
       />
-      <ProductsTable productsProp={products} />
+      <ProductsTable productsProp={products} setSelectRows={setSelectRows} />
     </>
   );
 };

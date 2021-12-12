@@ -1,9 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import { Table } from "antd";
 
-const ProductsTable = ({ productsProp }) => {
-  const [selectRows, setSelectRows] = useState([]);
-
+const ProductsTable = ({ productsProp, setSelectRows }) => {
   const columns = [
     {
       title: "Id",
