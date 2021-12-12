@@ -59,6 +59,7 @@ const Products = () => {
   return (
     <>
       <FiltersSection
+        selectRows={selectRows}
         methods={{
           handleClickCategoriesFilter,
           handleClickNewProduct,

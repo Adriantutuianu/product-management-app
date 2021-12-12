@@ -2,7 +2,7 @@ import React from "react";
 import { Button, Typography, Menu, Dropdown } from "antd";
 import { DownOutlined } from "@ant-design/icons";
 
-const FiltersSection = ({ methods, categories }) => {
+const FiltersSection = ({ methods, categories, selectRows }) => {
   const { Title } = Typography;
 
   const {
@@ -46,7 +46,11 @@ const FiltersSection = ({ methods, categories }) => {
       <Button type="primary" onClick={handleClickNewProduct}>
         Create new product
       </Button>
-      <Button type="primary" onClick={handleClickUpdateProduct}>
+      <Button
+        type="primary"
+        disabled={selectRows.length !== 1}
+        onClick={handleClickUpdateProduct}
+      >
         Update product
       </Button>
     </section>
