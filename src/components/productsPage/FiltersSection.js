@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Typography, Menu, Dropdown } from "antd";
+import { Button, Typography, Menu, Dropdown, Tooltip } from "antd";
 import { DownOutlined } from "@ant-design/icons";
 
 const FiltersSection = ({ methods, categories, selectRows }) => {
@@ -46,13 +46,18 @@ const FiltersSection = ({ methods, categories, selectRows }) => {
       <Button type="primary" onClick={handleClickNewProduct}>
         Create new product
       </Button>
-      <Button
-        type="primary"
-        disabled={selectRows.length !== 1}
-        onClick={handleClickUpdateProduct}
+      <Tooltip
+        placement="topLeft"
+        title={selectRows.length !== 1 ? "Select only 1 row" : ""}
       >
-        Update product
-      </Button>
+        <Button
+          type="primary"
+          disabled={selectRows.length !== 1}
+          onClick={handleClickUpdateProduct}
+        >
+          Update product
+        </Button>
+      </Tooltip>
     </section>
   );
 };
