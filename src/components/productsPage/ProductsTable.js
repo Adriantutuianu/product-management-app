@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import { Table } from "antd";
 
 const ProductsTable = ({ productsProp }) => {
+  const [selectRows, setSelectRows] = useState([]);
+
   const columns = [
     {
       title: "Id",
@@ -27,24 +29,15 @@ const ProductsTable = ({ productsProp }) => {
 
   const rowSelection = {
     onChange: (selectedRowKeys, selectedRows) => {
-      console.log(
-        `selectedRowKeys: ${selectedRowKeys}`,
-        "selectedRows: ",
-        selectedRows
-      );
+      setSelectRows(selectedRows);
     },
-    getCheckboxProps: (record) => ({
-      disabled: record.name === "Disabled User",
-      // Column configuration not to be checked
-      name: record.name,
-    }),
   };
 
   return (
     <Table
       className="products-table"
       rowSelection={{
-        type: rowSelection,
+        ...rowSelection,
       }}
       dataSource={productsProp}
       columns={columns}
