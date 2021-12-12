@@ -12,6 +12,10 @@
   border-radius: 10px;
 }
 
+.filters-actions .ant-btn[disabled] {
+  color: grey;
+}
+
 .products-table {
   margin: 5px 5px 20px 5px;
   border: 1px solid var(--primary-color);
