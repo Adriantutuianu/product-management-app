@@ -1,7 +1,7 @@
 import React from "react";
-import { Typography, Divider } from "antd";
+import { Typography } from "antd";
 
-const { Title, Paragraph, Text, Link } = Typography;
+const { Title, Paragraph, Text } = Typography;
 
 const About = () => {
   return (
@@ -15,21 +15,36 @@ const About = () => {
         </Text>
       </Paragraph>
       <Paragraph>
-        <Text code>
-          Create allows you to add new rows/records to a database/table. If the
-          record does not exist, the create operation adds it to the database.
-        </Text>
-      </Paragraph>
-      <Paragraph>
-        <Text italic>
-          Read is the operation that allows us to see the recipe we just
-          created. It does not alter data. It simply displays it. Read consists
-          of a function that queries our database and fetches all our records,
-          in this case, recipes. We can tailor our queries to pull back all
-          recipes, or only recipes of a particular type (for example,, vegan
-          recipes). We can also pull back a single recipe if we have a UID
-          (unique identifier).
-        </Text>
+        <ul>
+          <li>
+            {" "}
+            <Text code>
+              Create allows you to add new rows/records to a database/table. If
+              the record does not exist, the create operation adds it to the
+              database.
+            </Text>
+          </li>
+          <li>
+            {" "}
+            <Text italic>
+              Read is the operation that allows us to see the recipe we just
+              created. It does not alter data. It simply displays it. Read
+              consists of a function that queries our database and fetches all
+              our records, in this case, recipes. We can tailor our queries to
+              pull back all recipes, or only recipes of a particular type (for
+              example,, vegan recipes). We can also pull back a single recipe if
+              we have a UID (unique identifier).
+            </Text>
+          </li>
+          <li>
+            <Text type="secondary">
+              Update is the operation that allows us to modify existing data and
+              records within a table. We can update a single field within a
+              record or multiple fields at once. It is also possible to update
+              multiple records at once too.
+            </Text>
+          </li>
+        </ul>
       </Paragraph>
       <Text mark>
         This page is build using a fake API and it's not going to make any
