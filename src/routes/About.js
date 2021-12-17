@@ -52,10 +52,21 @@ const About = () => {
           </li>
         </ul>
       </Paragraph>
-      <Text mark>
-        This page is build using a fake API and it's not going to make any
-        change in the database.
-      </Text>
+      <Paragraph>
+        <Text mark>
+          This page is build using a fake API and it's not going to make any
+          change in the database.
+        </Text>
+      </Paragraph>
+      <Paragraph>
+        {" "}
+        <Text type="success">
+          FakeStoreApi is a free online REST API that you can use whenever you
+          need Pseudo-real data for your e-commerce or shopping website without
+          running any server-side code. It's awesome for teaching purposes,
+          sample codes, tests, etc.
+        </Text>
+      </Paragraph>
     </div>
   );
 };
