@@ -1,11 +1,12 @@
 import React from "react";
+import "./about.css";
 import { Typography } from "antd";
 
 const { Title, Paragraph, Text } = Typography;
 
 const About = () => {
   return (
-    <div>
+    <div className="about">
       <Title level={2}>Introduction</Title>
       <Paragraph>
         <Text strong>
