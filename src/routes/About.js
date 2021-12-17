@@ -44,6 +44,12 @@ const About = () => {
               multiple records at once too.
             </Text>
           </li>
+          <li>
+            <Text type="warning">
+              Delete is the operation that allows us to remove records from a
+              table.
+            </Text>
+          </li>
         </ul>
       </Paragraph>
       <Text mark>
