@@ -48,7 +48,7 @@ const FiltersSection = ({ methods, categories, selectRows }) => {
       </Button>
       <Tooltip
         placement="topLeft"
-        title={selectRows.length !== 1 ? "Select only 1 row" : ""}
+        title={selectRows.length < 1 ? "Please select at least 1 product" : ""}
       >
         <Button
           type="primary"
