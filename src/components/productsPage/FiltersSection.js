@@ -1,8 +1,16 @@
-import React from "react";
-import { Button, Typography, Menu, Dropdown, Tooltip } from "antd";
+import React, { useState } from "react";
+import { Button, Typography, Menu, Dropdown, Tooltip, Drawer } from "antd";
 import { DownOutlined } from "@ant-design/icons";
 
 const FiltersSection = ({ methods, categories, selectRows }) => {
+  const [visible, setVisible] = useState(false);
+  const showDrawer = () => {
+    setVisible(true);
+  };
+  const onClose = () => {
+    setVisible(false);
+  };
+
   const { Title } = Typography;
 
   const {
@@ -53,8 +61,19 @@ const FiltersSection = ({ methods, categories, selectRows }) => {
         <Button
           type="primary"
           disabled={selectRows.length !== 1}
-          onClick={handleClickUpdateProduct}
+          // onClick={handleClickUpdateProduct}
+          onClick={showDrawer}
         >
+          <Drawer
+            title="Basic Drawer"
+            placement="right"
+            onClose={onClose}
+            visible={visible}
+          >
+            <p>Some contents...</p>
+            <p>Some contents...</p>
+            <p>Some contents...</p>
+          </Drawer>
           Update product
         </Button>
       </Tooltip>
