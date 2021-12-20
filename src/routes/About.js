@@ -1,13 +1,14 @@
 import React from "react";
 import "./about.css";
 import { Typography } from "antd";
+import TitleComp from "../components/Title";
 
-const { Title, Paragraph, Text } = Typography;
+const { Paragraph, Text } = Typography;
 
 const About = () => {
   return (
     <div className="about">
-      <Title level={2}>Introduction</Title>
+      <TitleComp title="About" />
       <Paragraph>
         <Text strong>
           This is a CRUD APP. A CRUD app is a specific type of software

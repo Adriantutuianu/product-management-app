@@ -3,8 +3,18 @@ import { Typography } from "antd";
 
 const { Title } = Typography;
 
-const Title = (props) => {
-  return <Title>{props.title}</Title>;
+const TitleComp = (props) => {
+  return (
+    <Title
+      style={{
+        color: "var(--primary-color)",
+        textAlign: "center",
+        margin: "20px",
+      }}
+    >
+      {props.title}
+    </Title>
+  );
 };
 
-export default Title;
+export default TitleComp;
