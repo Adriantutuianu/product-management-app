@@ -1,7 +1,8 @@
 import React from "react";
+import TitleComp from "../components/Title";
 
 const Users = () => {
-  return <div>Users</div>;
+  return <TitleComp title="Users" />;
 };
 
 export default Users;
