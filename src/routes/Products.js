@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./products.css";
 import FiltersSection from "../components/productsPage/FiltersSection";
 import ProductsTable from "../components/productsPage/ProductsTable";
+import TitleComp from "../components/Title";
 
 const Products = () => {
   const [products, setProducts] = useState([]);
@@ -58,6 +59,7 @@ const Products = () => {
 
   return (
     <>
+      <TitleComp title="Products" />
       <FiltersSection
         selectRows={selectRows}
         methods={{
