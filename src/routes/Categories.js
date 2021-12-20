@@ -1,6 +1,8 @@
 import React from "react";
+import TitleComp from "../components/Title";
+
 const Categories = () => {
-  return <div>Categories</div>;
+  return <TitleComp title="Categories" />;
 };
 
 export default Categories;
