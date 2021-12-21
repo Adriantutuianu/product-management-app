@@ -68,14 +68,16 @@ const FiltersSection = ({ methods, categories, selectRows }) => {
           Update product
         </Button>
         <Drawer
-          title="Basic Drawer"
+          title="Product:"
           placement="right"
           onClose={onClose}
           visible={visible}
         >
-          <p>Some contents...</p>
-          <p>Some contents...</p>
-          <p>Some contents...</p>
+          <p>Title: </p>
+          <p>Price: </p>
+          <p>Description: </p>
+          <p>Image: </p>
+          <p>Category: </p>
         </Drawer>
       </Tooltip>
     </section>
