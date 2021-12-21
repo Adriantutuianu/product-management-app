@@ -8,7 +8,7 @@ import {
   Drawer,
   Input,
 } from "antd";
-import { DownOutlined } from "@ant-design/icons";
+import { DownOutlined, InfoCircleOutlined } from "@ant-design/icons";
 
 const FiltersSection = ({ methods, categories, selectRows }) => {
   const [visible, setVisible] = useState(false);
@@ -85,8 +85,8 @@ const FiltersSection = ({ methods, categories, selectRows }) => {
           <Input placeholder="Title" style={{ marginBottom: "15px" }} />
           <Input placeholder="Price" style={{ marginBottom: "15px" }} />
           <Input placeholder="Description" style={{ marginBottom: "15px" }} />
+          <InfoCircleOutlined />
           <Input placeholder="Image" style={{ marginBottom: "15px" }} />
-          <p>Category: </p>
           <Button type="primary">Submit</Button>
         </Drawer>
       </Tooltip>
