@@ -4,9 +4,11 @@ import { DownOutlined } from "@ant-design/icons";
 
 const FiltersSection = ({ methods, categories, selectRows }) => {
   const [visible, setVisible] = useState(false);
-  const showDrawer = () => {
+
+  const handleClickUpdateProduct = () => {
     setVisible(true);
   };
+
   const onClose = () => {
     setVisible(false);
   };
@@ -16,7 +18,7 @@ const FiltersSection = ({ methods, categories, selectRows }) => {
   const {
     handleClickCategoriesFilter,
     handleClickNewProduct,
-    handleClickUpdateProduct,
+    // handleClickUpdateProduct,
   } = methods;
 
   // dynamic menu options
@@ -61,21 +63,20 @@ const FiltersSection = ({ methods, categories, selectRows }) => {
         <Button
           type="primary"
           disabled={selectRows.length !== 1}
-          // onClick={handleClickUpdateProduct}
-          onClick={showDrawer}
+          onClick={handleClickUpdateProduct}
         >
-          <Drawer
-            title="Basic Drawer"
-            placement="right"
-            onClose={onClose}
-            visible={visible}
-          >
-            <p>Some contents...</p>
-            <p>Some contents...</p>
-            <p>Some contents...</p>
-          </Drawer>
           Update product
         </Button>
+        <Drawer
+          title="Basic Drawer"
+          placement="right"
+          onClose={onClose}
+          visible={visible}
+        >
+          <p>Some contents...</p>
+          <p>Some contents...</p>
+          <p>Some contents...</p>
+        </Drawer>
       </Tooltip>
     </section>
   );
