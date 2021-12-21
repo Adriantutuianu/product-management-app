@@ -77,14 +77,15 @@ const FiltersSection = ({ methods, categories, selectRows }) => {
         </Button>
         <Drawer
           title="Product:"
+          style={{ textAlign: "center" }}
           placement="right"
           onClose={onClose}
           visible={visible}
         >
-          <Input placeholder="Title" />
-          <Input placeholder="Price" />
-          <Input placeholder="Description" />
-          <Input placeholder="Image" />
+          <Input placeholder="Title" style={{ marginBottom: "15px" }} />
+          <Input placeholder="Price" style={{ marginBottom: "15px" }} />
+          <Input placeholder="Description" style={{ marginBottom: "15px" }} />
+          <Input placeholder="Image" style={{ marginBottom: "15px" }} />
           <p>Category: </p>
         </Drawer>
       </Tooltip>
