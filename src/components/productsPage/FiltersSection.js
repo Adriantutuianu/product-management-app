@@ -87,6 +87,7 @@ const FiltersSection = ({ methods, categories, selectRows }) => {
           <Input placeholder="Description" style={{ marginBottom: "15px" }} />
           <Input placeholder="Image" style={{ marginBottom: "15px" }} />
           <p>Category: </p>
+          <Button type="primary">Submit</Button>
         </Drawer>
       </Tooltip>
     </section>
