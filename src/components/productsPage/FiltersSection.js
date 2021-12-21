@@ -1,5 +1,13 @@
 import React, { useState } from "react";
-import { Button, Typography, Menu, Dropdown, Tooltip, Drawer } from "antd";
+import {
+  Button,
+  Typography,
+  Menu,
+  Dropdown,
+  Tooltip,
+  Drawer,
+  Input,
+} from "antd";
 import { DownOutlined } from "@ant-design/icons";
 
 const FiltersSection = ({ methods, categories, selectRows }) => {
@@ -73,10 +81,10 @@ const FiltersSection = ({ methods, categories, selectRows }) => {
           onClose={onClose}
           visible={visible}
         >
-          <p>Title: </p>
-          <p>Price: </p>
-          <p>Description: </p>
-          <p>Image: </p>
+          <Input placeholder="Title" />
+          <Input placeholder="Price" />
+          <Input placeholder="Description" />
+          <Input placeholder="Image" />
           <p>Category: </p>
         </Drawer>
       </Tooltip>
