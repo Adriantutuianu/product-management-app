@@ -85,8 +85,14 @@ const FiltersSection = ({ methods, categories, selectRows }) => {
           <Input placeholder="Title" style={{ marginBottom: "15px" }} />
           <Input placeholder="Price" style={{ marginBottom: "15px" }} />
           <Input placeholder="Description" style={{ marginBottom: "15px" }} />
-          <InfoCircleOutlined />
-          <Input placeholder="Image" style={{ marginBottom: "15px" }} />
+
+          <div style={{ display: "flex" }}>
+            {" "}
+            <Tooltip placement="topLeft" title={"This will be the image URL"}>
+              <InfoCircleOutlined style={{ marginRight: "10px" }} />
+            </Tooltip>{" "}
+            <Input placeholder="Image" style={{ marginBottom: "15px" }} />
+          </div>
           <Button type="primary">Submit</Button>
         </Drawer>
       </Tooltip>
