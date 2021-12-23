@@ -76,7 +76,7 @@ const FiltersSection = ({ methods, categories, selectRows }) => {
           Update product
         </Button>
         <Drawer
-          title="Product:"
+          title="Update Product :"
           style={{ textAlign: "center" }}
           placement="right"
           onClose={onClose}
