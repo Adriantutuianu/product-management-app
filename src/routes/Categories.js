@@ -31,7 +31,9 @@ const Categories = () => {
         size="large"
         bordered
         dataSource={categories}
-        renderItem={(item) => <List.Item>{item}</List.Item>}
+        renderItem={(item) => (
+          <List.Item style={{ textTransform: "capitalize" }}>{item}</List.Item>
+        )}
       />
     </>
   );
