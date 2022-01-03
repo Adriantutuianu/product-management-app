@@ -61,7 +61,9 @@ const UpdateProduct = (props) => {
             <InfoCircleOutlined style={{ marginLeft: "10px" }} />
           </Tooltip>{" "}
         </div>
-        <Button type="primary">Submit</Button>
+        <Button type="primary" style={{ marginTop: "15px" }}>
+          Submit
+        </Button>
       </Drawer>
     </Tooltip>
   );
