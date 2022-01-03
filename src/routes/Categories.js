@@ -25,6 +25,14 @@ const Categories = () => {
     }
   };
 
+  const categoriesEndpoint = "https://fakestoreapi.com/products/categories";
+
+  useEffect(() => {
+    //get categories onload
+    getCategories(categoriesEndpoint);
+  }, []);
+
+  console.log(categories);
   return (
     <>
       <TitleComp title="Categories" />
