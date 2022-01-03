@@ -1,26 +1,9 @@
-import React, { useState } from "react";
-import {
-  Button,
-  Typography,
-  Menu,
-  Dropdown,
-  Tooltip,
-  Drawer,
-  Input,
-} from "antd";
-import { DownOutlined, InfoCircleOutlined } from "@ant-design/icons";
+import React from "react";
+import UpdateProduct from "./UpdateProduct";
+import { Button, Typography, Menu, Dropdown } from "antd";
+import { DownOutlined } from "@ant-design/icons";
 
 const FiltersSection = ({ methods, categories, selectRows }) => {
-  const [visible, setVisible] = useState(false);
-
-  const handleClickUpdateProduct = () => {
-    setVisible(true);
-  };
-
-  const onClose = () => {
-    setVisible(false);
-  };
-
   const { Title } = Typography;
 
   const {
@@ -64,44 +47,7 @@ const FiltersSection = ({ methods, categories, selectRows }) => {
       <Button type="primary" onClick={handleClickNewProduct}>
         Create new product
       </Button>
-      <Tooltip
-        placement="topLeft"
-        title={
-          selectRows.length === 0
-            ? "Please select 1 product"
-            : selectRows.length >= 2
-            ? "Please select only 1 product"
-            : ""
-        }
-      >
-        <Button
-          type="primary"
-          disabled={selectRows.length !== 1}
-          onClick={handleClickUpdateProduct}
-        >
-          Update product
-        </Button>
-        <Drawer
-          title="Update Product :"
-          style={{ textAlign: "center" }}
-          placement="right"
-          onClose={onClose}
-          visible={visible}
-        >
-          <Input placeholder="Title" style={{ marginBottom: "15px" }} />
-          <Input placeholder="Price" style={{ marginBottom: "15px" }} />
-          <Input placeholder="Description" style={{ marginBottom: "15px" }} />
-
-          <div style={{ display: "flex", alignItems: "center" }}>
-            {" "}
-            <Input placeholder="Image" style={{ marginBottom: "15px" }} />
-            <Tooltip placement="topLeft" title={"This will be the image URL"}>
-              <InfoCircleOutlined style={{ marginLeft: "10px" }} />
-            </Tooltip>{" "}
-          </div>
-          <Button type="primary">Submit</Button>
-        </Drawer>
-      </Tooltip>
+      <UpdateProduct selectRows={selectRows} />
     </section>
   );
 };
