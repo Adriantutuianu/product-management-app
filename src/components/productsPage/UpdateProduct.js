@@ -38,7 +38,10 @@ const UpdateProduct = (props) => {
         onClose={onClose}
         visible={visible}
       >
-        <Input placeholder="Title" style={{ marginBottom: "15px" }} />
+        <Input
+          placeholder={props.selectRows[0].title}
+          style={{ marginBottom: "15px" }}
+        />
         <Input placeholder="Price" style={{ marginBottom: "15px" }} />
         <Input placeholder="Description" style={{ marginBottom: "15px" }} />
 
