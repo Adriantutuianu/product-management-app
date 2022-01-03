@@ -42,12 +42,21 @@ const UpdateProduct = (props) => {
           placeholder={props.selectRows[0].title}
           style={{ marginBottom: "15px" }}
         />
-        <Input placeholder="Price" style={{ marginBottom: "15px" }} />
-        <Input placeholder="Description" style={{ marginBottom: "15px" }} />
+        <Input
+          placeholder={props.selectRows[0].price}
+          style={{ marginBottom: "15px" }}
+        />
+        <Input
+          placeholder={props.selectRows[0].description}
+          style={{ marginBottom: "15px" }}
+        />
 
         <div style={{ display: "flex", alignItems: "center" }}>
           {" "}
-          <Input placeholder="Image" style={{ marginBottom: "15px" }} />
+          <Input
+            placeholder={props.selectRows[0].image}
+            style={{ marginBottom: "15px" }}
+          />
           <Tooltip placement="topLeft" title={"This will be the image URL"}>
             <InfoCircleOutlined style={{ marginLeft: "10px" }} />
           </Tooltip>{" "}
