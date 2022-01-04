@@ -68,11 +68,19 @@ const UpdateProduct = (props) => {
 
           <Dropdown overlay={categoriesMenu} trigger={["click"]}>
             <p
+              style={{
+                display: "flex",
+                justifyContent: "left",
+                alignItems: "center",
+                color: "lightgray",
+                padding: "3px 12px",
+                border: "1px solid var(--secondary-color)",
+              }}
               className="ant-dropdown-link"
               onClick={(e) => e.preventDefault()}
             >
               Select category
-              <DownOutlined />
+              <DownOutlined style={{ marginLeft: "5px" }} />
             </p>
           </Dropdown>
 
