@@ -55,10 +55,7 @@ const UpdateProduct = (props) => {
 
           <div style={{ display: "flex", alignItems: "center" }}>
             {" "}
-            <Input
-              placeholder={props.selectRows[0].image}
-              style={{ marginBottom: "15px" }}
-            />
+            <Input placeholder={props.selectRows[0].image} />
             <Tooltip placement="topLeft" title={"This will be the image URL"}>
               <InfoCircleOutlined style={{ marginLeft: "10px" }} />
             </Tooltip>{" "}
