@@ -47,7 +47,7 @@ const FiltersSection = ({ methods, categories, selectRows }) => {
       <Button type="primary" onClick={handleClickNewProduct}>
         Create new product
       </Button>
-      <UpdateProduct selectRows={selectRows} />
+      <UpdateProduct selectRows={selectRows} categories={categories} />
     </section>
   );
 };
