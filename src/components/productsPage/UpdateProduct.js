@@ -31,40 +31,43 @@ const UpdateProduct = (props) => {
       >
         Update product
       </Button>
-      <Drawer
-        title="Update Product :"
-        style={{ textAlign: "center" }}
-        placement="right"
-        onClose={onClose}
-        visible={visible}
-      >
-        <Input
-          placeholder={props.selectRows[0].title}
-          style={{ marginBottom: "15px" }}
-        />
-        <Input
-          placeholder={props.selectRows[0].price}
-          style={{ marginBottom: "15px" }}
-        />
-        <Input
-          placeholder={props.selectRows[0].description}
-          style={{ marginBottom: "15px" }}
-        />
 
-        <div style={{ display: "flex", alignItems: "center" }}>
-          {" "}
+      {visible && (
+        <Drawer
+          title="Update Product :"
+          style={{ textAlign: "center" }}
+          placement="right"
+          onClose={onClose}
+          visible={visible}
+        >
           <Input
-            placeholder={props.selectRows[0].image}
+            placeholder={props.selectRows[0].title}
             style={{ marginBottom: "15px" }}
           />
-          <Tooltip placement="topLeft" title={"This will be the image URL"}>
-            <InfoCircleOutlined style={{ marginLeft: "10px" }} />
-          </Tooltip>{" "}
-        </div>
-        <Button type="primary" style={{ marginTop: "15px" }}>
-          Submit
-        </Button>
-      </Drawer>
+          <Input
+            placeholder={props.selectRows[0].price}
+            style={{ marginBottom: "15px" }}
+          />
+          <Input
+            placeholder={props.selectRows[0].description}
+            style={{ marginBottom: "15px" }}
+          />
+
+          <div style={{ display: "flex", alignItems: "center" }}>
+            {" "}
+            <Input
+              placeholder={props.selectRows[0].image}
+              style={{ marginBottom: "15px" }}
+            />
+            <Tooltip placement="topLeft" title={"This will be the image URL"}>
+              <InfoCircleOutlined style={{ marginLeft: "10px" }} />
+            </Tooltip>{" "}
+          </div>
+          <Button type="primary" style={{ marginTop: "15px" }}>
+            Submit
+          </Button>
+        </Drawer>
+      )}
     </Tooltip>
   );
 };
