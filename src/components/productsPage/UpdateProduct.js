@@ -8,8 +8,8 @@ const UpdateProduct = (props) => {
   const handleClickUpdateProduct = () => {
     setVisible(true);
   };
-  console.log(props);
-  const onClose = () => {
+
+  const handleCloseDrawer = () => {
     setVisible(false);
   };
 
@@ -37,7 +37,7 @@ const UpdateProduct = (props) => {
           title="Update Product :"
           style={{ textAlign: "center" }}
           placement="right"
-          onClose={onClose}
+          onClose={handleCloseDrawer}
           visible={visible}
         >
           <Input
