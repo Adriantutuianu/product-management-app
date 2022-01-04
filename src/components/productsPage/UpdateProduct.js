@@ -13,36 +13,16 @@ const UpdateProduct = (props) => {
     setVisible(false);
   };
 
-  const menu = (
-    <Menu>
-      <Menu.Item>
-        <a
-          target="_blank"
-          rel="noopener noreferrer"
-          href="https://www.antgroup.com"
-        >
-          1st menu item
-        </a>
-      </Menu.Item>
-      <Menu.Item icon={<DownOutlined />} disabled>
-        <a
-          target="_blank"
-          rel="noopener noreferrer"
-          href="https://www.aliyun.com"
-        >
-          2nd menu item (disabled)
-        </a>
-      </Menu.Item>
-      <Menu.Item disabled>
-        <a
-          target="_blank"
-          rel="noopener noreferrer"
-          href="https://www.luohanacademy.com"
-        >
-          3rd menu item (disabled)
-        </a>
-      </Menu.Item>
-      <Menu.Item danger>a danger item</Menu.Item>
+  const menuItems = props.categories.map((category, index) => (
+    <Menu.Item key={index} style={{ textTransform: "capitalize" }}>
+      {category}
+    </Menu.Item>
+  ));
+
+  // passing selected value to function that will fetch all products that contain a specific category
+  const categoriesMenu = (
+    <Menu onClick={({ domEvent }) => console.log(domEvent.target.textContent)}>
+      {menuItems}
     </Menu>
   );
 
@@ -86,7 +66,7 @@ const UpdateProduct = (props) => {
             style={{ marginBottom: "15px" }}
           />
 
-          <Dropdown overlay={menu} trigger={["click"]}>
+          <Dropdown overlay={categoriesMenu} trigger={["click"]}>
             <p
               className="ant-dropdown-link"
               onClick={(e) => e.preventDefault()}
