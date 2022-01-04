@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { Button, Tooltip, Drawer, Input } from "antd";
-import { InfoCircleOutlined } from "@ant-design/icons";
+import { Button, Tooltip, Drawer, Input, Menu, Dropdown } from "antd";
+import { InfoCircleOutlined, DownOutlined } from "@ant-design/icons";
 
 const UpdateProduct = (props) => {
   const [visible, setVisible] = useState(false);
@@ -12,6 +12,39 @@ const UpdateProduct = (props) => {
   const handleCloseDrawer = () => {
     setVisible(false);
   };
+
+  const menu = (
+    <Menu>
+      <Menu.Item>
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://www.antgroup.com"
+        >
+          1st menu item
+        </a>
+      </Menu.Item>
+      <Menu.Item icon={<DownOutlined />} disabled>
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://www.aliyun.com"
+        >
+          2nd menu item (disabled)
+        </a>
+      </Menu.Item>
+      <Menu.Item disabled>
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://www.luohanacademy.com"
+        >
+          3rd menu item (disabled)
+        </a>
+      </Menu.Item>
+      <Menu.Item danger>a danger item</Menu.Item>
+    </Menu>
+  );
 
   return (
     <Tooltip
@@ -52,6 +85,16 @@ const UpdateProduct = (props) => {
             placeholder={props.selectRows[0].description}
             style={{ marginBottom: "15px" }}
           />
+
+          <Dropdown overlay={menu} trigger={["click"]}>
+            <p
+              className="ant-dropdown-link"
+              onClick={(e) => e.preventDefault()}
+            >
+              Select category
+              <DownOutlined />
+            </p>
+          </Dropdown>
 
           <div style={{ display: "flex", alignItems: "center" }}>
             {" "}
