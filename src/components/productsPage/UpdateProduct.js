@@ -6,6 +6,7 @@ const UpdateProduct = (props) => {
   const [visible, setVisible] = useState(false);
   const [titleValue, setTitleValue] = useState("");
   const [priceValue, setPriceValue] = useState("");
+  const [descriptionValue, setDescriptionValue] = useState("");
 
   const handleClickUpdateProduct = () => {
     setVisible(true);
@@ -68,6 +69,8 @@ const UpdateProduct = (props) => {
             style={{ marginBottom: "15px" }}
           />
           <Input
+            value={descriptionValue}
+            onChange={(e) => setDescriptionValue(e.target.value)}
             placeholder={props.selectRows[0].description}
             style={{ marginBottom: "15px" }}
           />
