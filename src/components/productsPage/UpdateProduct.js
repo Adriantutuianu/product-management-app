@@ -56,9 +56,7 @@ const UpdateProduct = (props) => {
         >
           <Input
             value={titleValue}
-            onChange={(e) =>
-              setTitleValue(titleValue.concat(e.nativeEvent.data))
-            }
+            onChange={(e) => setTitleValue(e.target.value)}
             placeholder={props.selectRows[0].title}
             style={{ marginBottom: "15px" }}
           />
