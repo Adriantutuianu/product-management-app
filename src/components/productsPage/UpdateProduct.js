@@ -4,6 +4,7 @@ import { InfoCircleOutlined, DownOutlined } from "@ant-design/icons";
 
 const UpdateProduct = (props) => {
   const [visible, setVisible] = useState(false);
+  const [titleValue, setTitleValue] = useState("");
 
   const handleClickUpdateProduct = () => {
     setVisible(true);
@@ -54,6 +55,10 @@ const UpdateProduct = (props) => {
           visible={visible}
         >
           <Input
+            value={titleValue}
+            onChange={(e) =>
+              setTitleValue(titleValue.concat(e.nativeEvent.data))
+            }
             placeholder={props.selectRows[0].title}
             style={{ marginBottom: "15px" }}
           />
