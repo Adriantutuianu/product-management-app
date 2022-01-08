@@ -7,6 +7,7 @@ const UpdateProduct = (props) => {
   const [titleValue, setTitleValue] = useState("");
   const [priceValue, setPriceValue] = useState("");
   const [descriptionValue, setDescriptionValue] = useState("");
+  const [imageValue, setImageValue] = useState("");
 
   const handleClickUpdateProduct = () => {
     setVisible(true);
@@ -95,7 +96,11 @@ const UpdateProduct = (props) => {
 
           <div style={{ display: "flex", alignItems: "center" }}>
             {" "}
-            <Input placeholder={props.selectRows[0].image} />
+            <Input
+              value={imageValue}
+              onChange={(e) => setImageValue(e.target.value)}
+              placeholder={props.selectRows[0].image}
+            />
             <Tooltip placement="topLeft" title={"This will be the image URL"}>
               <InfoCircleOutlined style={{ marginLeft: "10px" }} />
             </Tooltip>{" "}
