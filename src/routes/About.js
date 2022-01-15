@@ -20,7 +20,7 @@ const About = () => {
         <ul>
           <li>
             {" "}
-            <Text code>
+            <Text>
               Create allows you to add new rows/records to a database/table. If
               the record does not exist, the create operation adds it to the
               database.
@@ -28,7 +28,7 @@ const About = () => {
           </li>
           <li>
             {" "}
-            <Text italic>
+            <Text>
               Read is the operation that allows us to see the recipe we just
               created. It does not alter data. It simply displays it. Read
               consists of a function that queries our database and fetches all
@@ -39,7 +39,7 @@ const About = () => {
             </Text>
           </li>
           <li>
-            <Text type="secondary">
+            <Text>
               Update is the operation that allows us to modify existing data and
               records within a table. We can update a single field within a
               record or multiple fields at once. It is also possible to update
@@ -55,14 +55,14 @@ const About = () => {
         </ul>
       </Paragraph>
       <Paragraph>
-        <Text>
+        <Text strong>
           This page is build using a fake API and it's not going to make any
           change in the database.
         </Text>
       </Paragraph>
       <Paragraph>
         {" "}
-        <Text>
+        <Text strong>
           FakeStoreApi is a free online REST API that you can use whenever you
           need Pseudo-real data for your e-commerce or shopping website without
           running any server-side code. It's awesome for teaching purposes,
