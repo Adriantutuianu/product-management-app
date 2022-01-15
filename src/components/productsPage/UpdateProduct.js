@@ -32,6 +32,11 @@ const UpdateProduct = (props) => {
       {category}
     </Option>
   ));
+
+  const handleClickSubmit = () => {
+    console.log("clicked");
+  };
+
   return (
     <Tooltip
       placement="topLeft"
@@ -99,7 +104,11 @@ const UpdateProduct = (props) => {
               <InfoCircleOutlined style={{ marginLeft: "10px" }} />
             </Tooltip>{" "}
           </div>
-          <Button type="primary" style={{ marginTop: "15px" }}>
+          <Button
+            onClick={handleClickSubmit}
+            type="primary"
+            style={{ marginTop: "15px" }}
+          >
             Submit
           </Button>
         </Drawer>
