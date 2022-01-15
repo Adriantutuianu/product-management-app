@@ -33,8 +33,21 @@ const UpdateProduct = (props) => {
     </Option>
   ));
 
+  const updateProductEndpoint = `https://fakestoreapi.com/products/${props.selectRows[0].id}`;
+
   const handleClickSubmit = () => {
-    console.log("clicked");
+    fetch(updateProductEndpoint, {
+      method: "PUT",
+      body: JSON.stringify({
+        title: "test product",
+        price: 13.5,
+        description: "lorem ipsum set",
+        image: "https://i.pravatar.cc",
+        category: "electronic",
+      }),
+    })
+      .then((res) => res.json())
+      .then((json) => console.log(json));
   };
 
   return (
