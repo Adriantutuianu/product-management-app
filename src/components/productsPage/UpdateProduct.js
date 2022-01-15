@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { Button, Tooltip, Drawer, Input, Menu, Dropdown, Select } from "antd";
-import { InfoCircleOutlined, DownOutlined } from "@ant-design/icons";
+import { Button, Tooltip, Drawer, Input, Select } from "antd";
+import { InfoCircleOutlined } from "@ant-design/icons";
 
 const UpdateProduct = (props) => {
   const [visible, setVisible] = useState(false);
