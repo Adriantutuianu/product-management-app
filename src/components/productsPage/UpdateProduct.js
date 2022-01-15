@@ -3,13 +3,12 @@ import { Button, Tooltip, Drawer, Input, Select } from "antd";
 import { InfoCircleOutlined } from "@ant-design/icons";
 
 const UpdateProduct = (props) => {
-  const [visible, setVisible] = useState(false);
-  const [titleValue, setTitleValue] = useState("");
-  const [priceValue, setPriceValue] = useState("");
-  const [descriptionValue, setDescriptionValue] = useState("");
-  const [imageValue, setImageValue] = useState("");
-
-  const { Option } = Select;
+  const [visible, setVisible] = useState(false),
+    [titleValue, setTitleValue] = useState(""),
+    [priceValue, setPriceValue] = useState(""),
+    [descriptionValue, setDescriptionValue] = useState(""),
+    [imageValue, setImageValue] = useState(""),
+    { Option } = Select;
 
   const handleClickUpdateProduct = () => {
     setVisible(true);
