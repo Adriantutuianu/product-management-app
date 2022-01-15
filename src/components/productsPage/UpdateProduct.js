@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Button, Tooltip, Drawer, Input, Menu, Dropdown } from "antd";
+import { Button, Tooltip, Drawer, Input, Menu, Dropdown, Select } from "antd";
 import { InfoCircleOutlined, DownOutlined } from "@ant-design/icons";
 
 const UpdateProduct = (props) => {
@@ -9,6 +9,8 @@ const UpdateProduct = (props) => {
   const [descriptionValue, setDescriptionValue] = useState("");
   const [imageValue, setImageValue] = useState("");
 
+  const { Option } = Select;
+
   const handleClickUpdateProduct = () => {
     setVisible(true);
   };
@@ -17,18 +19,19 @@ const UpdateProduct = (props) => {
     setVisible(false);
   };
 
-  const menuItems = props.categories.map((category, index) => (
-    <Menu.Item key={index} style={{ textTransform: "capitalize" }}>
-      {category}
-    </Menu.Item>
-  ));
+  function handleChangeCategories(value) {
+    console.log(`selected ${value}`);
+  }
 
-  // passing selected value to function that will fetch all products that contain a specific category
-  const categoriesMenu = (
-    <Menu onClick={({ domEvent }) => console.log(domEvent.target.textContent)}>
-      {menuItems}
-    </Menu>
-  );
+  const categoriesDropdownItems = props.categories.map((category, index) => (
+    <Option
+      key={index}
+      style={{ textTransform: "capitalize" }}
+      value={category}
+    >
+      {category}
+    </Option>
+  ));
 
   return (
     <Tooltip
@@ -77,23 +80,13 @@ const UpdateProduct = (props) => {
             style={{ marginBottom: "15px" }}
           />
 
-          <Dropdown overlay={categoriesMenu} trigger={["click"]}>
-            <p
-              style={{
-                display: "flex",
-                justifyContent: "left",
-                alignItems: "center",
-                color: "lightgray",
-                padding: "3px 12px",
-                border: "1px solid var(--secondary-color)",
-              }}
-              className="ant-dropdown-link"
-              onClick={(e) => e.preventDefault()}
-            >
-              Select category
-              <DownOutlined style={{ marginLeft: "5px" }} />
-            </p>
-          </Dropdown>
+          <Select
+            // defaultValue="lucy"
+            style={{ width: 120 }}
+            onChange={handleChangeCategories}
+          >
+            {categoriesDropdownItems}
+          </Select>
 
           <div style={{ display: "flex", alignItems: "center" }}>
             {" "}
