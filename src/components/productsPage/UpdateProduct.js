@@ -32,7 +32,6 @@ const UpdateProduct = (props) => {
       {category}
     </Option>
   ));
-
   return (
     <Tooltip
       placement="topLeft"
@@ -81,7 +80,7 @@ const UpdateProduct = (props) => {
           />
 
           <Select
-            // defaultValue="lucy"
+            defaultValue={props.selectRows[0].category}
             style={{ width: 120 }}
             onChange={handleChangeCategories}
           >
