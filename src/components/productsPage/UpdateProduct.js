@@ -8,6 +8,7 @@ const UpdateProduct = (props) => {
     [priceValue, setPriceValue] = useState(""),
     [descriptionValue, setDescriptionValue] = useState(""),
     [imageValue, setImageValue] = useState(""),
+    [categoriesValue, setCategoriesValue] = useState(""),
     { Option } = Select;
 
   const handleClickUpdateProduct = () => {
@@ -19,7 +20,7 @@ const UpdateProduct = (props) => {
   };
 
   function handleChangeCategories(value) {
-    console.log(`selected ${value}`);
+    setCategoriesValue(value);
   }
 
   const categoriesDropdownItems = props.categories.map((category, index) => (
