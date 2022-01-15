@@ -53,6 +53,7 @@ const UpdateProduct = (props) => {
         <Drawer
           title="Update Product :"
           style={{ textAlign: "center" }}
+          width={500}
           placement="right"
           onClose={handleCloseDrawer}
           visible={visible}
