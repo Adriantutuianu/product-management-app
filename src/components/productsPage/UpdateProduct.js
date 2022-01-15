@@ -49,10 +49,11 @@ const UpdateProduct = (props) => {
       .then((res) => res.json())
       .then((json) => console.log(json))
       .then(
-        console.warn(
+        console.info(
           "Will return an object with sent id. Remember that nothing in real will update in the database."
         )
       );
+    handleCloseDrawer();
   };
 
   return (
