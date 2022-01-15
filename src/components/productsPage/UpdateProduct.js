@@ -33,21 +33,26 @@ const UpdateProduct = (props) => {
     </Option>
   ));
 
-  const updateProductEndpoint = `https://fakestoreapi.com/products/${props.selectRows[0].id}`;
+  const updateProductEndpoint = `https://fakestoreapi.com/products/${props?.selectRows[0]?.id}`;
 
   const handleClickSubmit = () => {
     fetch(updateProductEndpoint, {
-      method: "PUT",
+      method: "PATCH",
       body: JSON.stringify({
-        title: "test product",
-        price: 13.5,
-        description: "lorem ipsum set",
-        image: "https://i.pravatar.cc",
-        category: "electronic",
+        title: { titleValue },
+        price: { priceValue },
+        description: { descriptionValue },
+        image: { imageValue },
+        category: { categoriesValue },
       }),
     })
       .then((res) => res.json())
-      .then((json) => console.log(json));
+      .then((json) => console.log(json))
+      .then(
+        console.warn(
+          "Will return an object with sent id. Remember that nothing in real will update in the database."
+        )
+      );
   };
 
   return (
