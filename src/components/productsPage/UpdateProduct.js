@@ -80,8 +80,9 @@ const UpdateProduct = (props) => {
           />
 
           <Select
-            defaultValue={props.selectRows[0].category}
-            style={{ width: 120 }}
+            placeholder={props.selectRows[0].category}
+            style={{ width: "100%", marginBottom: "15px" }}
+            dropdownStyle={{ textAlign: "center" }}
             onChange={handleChangeCategories}
           >
             {categoriesDropdownItems}
