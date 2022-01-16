@@ -19,8 +19,10 @@ const CreateProduct = () => {
       </Button>
 
       <Drawer
-        title="Drawer with extra actions"
+        title="Create new product:"
+        style={{ textAlign: "center" }}
         width={500}
+        placement="right"
         onClose={onClose}
         visible={visible}
       >
