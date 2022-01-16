@@ -26,7 +26,6 @@ const FiltersSection = ({ methods, categories, selectRows }) => {
       {menuItems}
     </Menu>
   );
-
   return (
     <section className="filters-actions">
       <Title level={5}>Filters & actions</Title>
@@ -40,7 +39,7 @@ const FiltersSection = ({ methods, categories, selectRows }) => {
           Categories filter <DownOutlined />
         </a>
       </Dropdown>
-      <CreateProduct />
+      <CreateProduct categories={categories} />
 
       <UpdateProduct selectRows={selectRows} categories={categories} />
     </section>

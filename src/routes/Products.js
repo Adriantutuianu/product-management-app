@@ -43,7 +43,7 @@ const Products = () => {
       console.log("Failed to get all products: " + error);
     }
   };
-
+  console.log(categories);
   // Fetch all products with a specific category
   const handleClickCategoriesFilter = (category) => {
     getProducts(`https://fakestoreapi.com/products/category/${category}`);
