@@ -17,6 +17,11 @@ const UpdateProduct = (props) => {
 
   const handleCloseDrawer = () => {
     setVisible(false);
+    setTitleValue("");
+    setPriceValue("");
+    setDescriptionValue("");
+    setImageValue("");
+    setCategoriesValue("");
   };
 
   function handleChangeCategories(value) {
