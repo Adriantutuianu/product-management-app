@@ -49,14 +49,6 @@ const Products = () => {
     getProducts(`https://fakestoreapi.com/products/category/${category}`);
   };
 
-  const handleClickNewProduct = () => {
-    console.log("New Product Button was clicked!");
-  };
-  const handleClickUpdateProduct = () => {
-    //TODO: pass selected rows data to a drawer-antd.
-    console.log("Update product Button was clicked!");
-  };
-
   return (
     <>
       <TitleComp title="Products" />
@@ -64,8 +56,6 @@ const Products = () => {
         selectRows={selectRows}
         methods={{
           handleClickCategoriesFilter,
-          handleClickNewProduct,
-          handleClickUpdateProduct,
         }}
         categories={categories}
       />

@@ -1,16 +1,13 @@
 import React from "react";
 import UpdateProduct from "./UpdateProduct";
-import { Button, Typography, Menu, Dropdown } from "antd";
+import CreateProduct from "./CreateProduct";
+import { Typography, Menu, Dropdown } from "antd";
 import { DownOutlined } from "@ant-design/icons";
 
 const FiltersSection = ({ methods, categories, selectRows }) => {
   const { Title } = Typography;
 
-  const {
-    handleClickCategoriesFilter,
-    handleClickNewProduct,
-    // handleClickUpdateProduct,
-  } = methods;
+  const { handleClickCategoriesFilter } = methods;
 
   // dynamic menu options
   const menuItems = categories.map((category, index) => (
@@ -43,10 +40,8 @@ const FiltersSection = ({ methods, categories, selectRows }) => {
           Categories filter <DownOutlined />
         </a>
       </Dropdown>
+      <CreateProduct />
 
-      <Button type="primary" onClick={handleClickNewProduct}>
-        Create new product
-      </Button>
       <UpdateProduct selectRows={selectRows} categories={categories} />
     </section>
   );
