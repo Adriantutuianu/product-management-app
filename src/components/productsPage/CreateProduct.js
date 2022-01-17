@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Button, Tooltip, Drawer, Input, Select } from "antd";
 import { InfoCircleOutlined } from "@ant-design/icons";
-import UpdateProduct from "./UpdateProduct";
 
 const CreateProduct = (props) => {
   const [visible, setVisible] = useState(false),
@@ -117,7 +116,6 @@ const CreateProduct = (props) => {
           Submit
         </Button>
       </Drawer>
-      <UpdateProduct />
     </>
   );
 };
