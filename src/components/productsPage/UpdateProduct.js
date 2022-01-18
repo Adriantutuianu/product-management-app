@@ -60,7 +60,7 @@ const UpdateProduct = (props) => {
       );
     handleCloseDrawer();
   };
-
+  console.log(props);
   return (
     <Tooltip
       placement="topLeft"
@@ -82,7 +82,7 @@ const UpdateProduct = (props) => {
 
       {visible && (
         <Drawer
-          title="Update Product :"
+          title={`Update Product #${props.selectRows[0].id}:`}
           style={{ textAlign: "center" }}
           width={500}
           placement="right"
