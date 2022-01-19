@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Button, Tooltip, Drawer, Input, Select } from "antd";
+import { Button, Tooltip, Drawer, Input, Select, notification } from "antd";
 import { InfoCircleOutlined } from "@ant-design/icons";
 
 const CreateProduct = (props) => {
@@ -51,12 +51,14 @@ const CreateProduct = (props) => {
       }),
     })
       .then((res) => res.json())
-      .then((json) => console.log(json))
-      .then(
-        console.info(
-          "Will return an object with sent id. Remember that nothing in real will be created the database."
-        )
+      .then((json) =>
+        notification.open({
+          message: `Product #${json.id} was created.`,
+          description:
+            "Will return an object with sent id. Remember that nothing in real will be created the database.",
+        })
       );
+
     handleCloseDrawer();
   };
 
