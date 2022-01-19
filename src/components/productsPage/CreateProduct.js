@@ -80,20 +80,24 @@ const CreateProduct = (props) => {
           value={titleValue}
           onChange={(e) => setTitleValue(e.target.value)}
           style={{ marginBottom: "15px" }}
+          placeholder="Product title"
         />
         <Input
           value={priceValue}
+          placeholder="Product price"
           onChange={(e) => setPriceValue(e.target.value)}
           style={{ marginBottom: "15px" }}
         />
         <Input
           value={descriptionValue}
+          placeholder="Product description"
           onChange={(e) => setDescriptionValue(e.target.value)}
           style={{ marginBottom: "15px" }}
         />
 
         <Select
           style={{ width: "100%", marginBottom: "15px" }}
+          value={categoriesValue}
           dropdownStyle={{ textAlign: "center" }}
           onChange={handleChangeCategories}
         >
@@ -104,6 +108,7 @@ const CreateProduct = (props) => {
           {" "}
           <Input
             value={imageValue}
+            placeholder="Product image"
             onChange={(e) => setImageValue(e.target.value)}
           />
           <Tooltip placement="topLeft" title={"This will be the image URL"}>
