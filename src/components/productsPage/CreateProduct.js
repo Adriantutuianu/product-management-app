@@ -55,7 +55,7 @@ const CreateProduct = (props) => {
         notification.open({
           message: `Product #${json.id} was created.`,
           description:
-            "Will return an object with sent id. Remember that nothing in real will be created the database.",
+            "Remember this is a fake API, so nothing will be created the database.",
         })
       );
 
