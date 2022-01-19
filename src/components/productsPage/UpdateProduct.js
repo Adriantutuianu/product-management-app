@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Button, Tooltip, Drawer, Input, Select } from "antd";
+import { Button, Tooltip, Drawer, Input, Select, notification } from "antd";
 import { InfoCircleOutlined } from "@ant-design/icons";
 
 const UpdateProduct = (props) => {
@@ -52,11 +52,12 @@ const UpdateProduct = (props) => {
       }),
     })
       .then((res) => res.json())
-      .then((json) => console.log(json))
-      .then(
-        console.info(
-          "Will return an object with sent id. Remember that nothing in real will update in the database."
-        )
+      .then((json) =>
+        notification.open({
+          message: `Product #${json.id} was updated.`,
+          description:
+            "Remember this is a fake API, so nothing will be updated in the database.",
+        })
       );
     handleCloseDrawer();
   };
