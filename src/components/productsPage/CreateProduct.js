@@ -8,7 +8,7 @@ const CreateProduct = (props) => {
     [priceValue, setPriceValue] = useState(""),
     [descriptionValue, setDescriptionValue] = useState(""),
     [imageValue, setImageValue] = useState(""),
-    [categoriesValue, setCategoriesValue] = useState(""),
+    [categoriesValue, setCategoriesValue] = useState(null),
     { Option } = Select;
 
   const showDrawer = () => {
@@ -34,7 +34,7 @@ const CreateProduct = (props) => {
     setPriceValue("");
     setDescriptionValue("");
     setImageValue("");
-    setCategoriesValue("");
+    setCategoriesValue(null);
   };
   const handleClickSubmit = () => {
     fetch("https://fakestoreapi.com/products", {
@@ -93,9 +93,11 @@ const CreateProduct = (props) => {
         />
 
         <Select
-          style={{ width: "100%", marginBottom: "15px" }}
-          value={categoriesValue}
+          className="category-selector"
+          style={{ width: "100%", marginBottom: "15px", textAlign: "left" }}
           dropdownStyle={{ textAlign: "center" }}
+          value={categoriesValue}
+          placeholder="Category"
           onChange={handleChangeCategories}
         >
           {categoriesDropdownItems}
