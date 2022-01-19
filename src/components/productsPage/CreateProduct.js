@@ -14,9 +14,6 @@ const CreateProduct = (props) => {
   const showDrawer = () => {
     setVisible(true);
   };
-  const onClose = () => {
-    setVisible(false);
-  };
 
   function handleChangeCategories(value) {
     setCategoriesValue(value);
@@ -73,7 +70,7 @@ const CreateProduct = (props) => {
         style={{ textAlign: "center" }}
         width={500}
         placement="right"
-        onClose={onClose}
+        onClose={handleCloseDrawer}
         visible={visible}
       >
         <Input
