@@ -40,10 +40,6 @@ const FiltersSection = ({ methods, categories, selectRows }) => {
           Categories filter <DownOutlined />
         </a>
       </Dropdown>
-      <CreateProduct categories={categories} />
-
-      <UpdateProduct selectRows={selectRows} categories={categories} />
-
       <Button
         onClick={getProducts("https://fakestoreapi.com/products")}
         type="primary"
@@ -51,6 +47,10 @@ const FiltersSection = ({ methods, categories, selectRows }) => {
       >
         Reset
       </Button>
+
+      <CreateProduct categories={categories} />
+
+      <UpdateProduct selectRows={selectRows} categories={categories} />
     </section>
   );
 };
