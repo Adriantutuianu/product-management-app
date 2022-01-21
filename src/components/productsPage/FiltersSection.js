@@ -1,13 +1,14 @@
 import React from "react";
 import UpdateProduct from "./UpdateProduct";
 import CreateProduct from "./CreateProduct";
+
 import { Typography, Menu, Dropdown, Button } from "antd";
 import { DownOutlined } from "@ant-design/icons";
 
 const FiltersSection = ({ methods, categories, selectRows }) => {
   const { Title } = Typography;
 
-  const { handleClickCategoriesFilter } = methods;
+  const { handleClickCategoriesFilter, getProducts } = methods;
 
   // dynamic menu options
   const menuItems = categories.map((category, index) => (
@@ -44,7 +45,7 @@ const FiltersSection = ({ methods, categories, selectRows }) => {
       <UpdateProduct selectRows={selectRows} categories={categories} />
 
       <Button
-        // onClick={}
+        onClick={getProducts("https://fakestoreapi.com/products")}
         type="primary"
         style={{ marginTop: "15px" }}
       >

@@ -55,6 +55,7 @@ const Products = () => {
         selectRows={selectRows}
         methods={{
           handleClickCategoriesFilter,
+          getProducts,
         }}
         categories={categories}
       />
