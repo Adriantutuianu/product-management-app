@@ -1,7 +1,7 @@
 import React from "react";
 import UpdateProduct from "./UpdateProduct";
 import CreateProduct from "./CreateProduct";
-import { Typography, Menu, Dropdown } from "antd";
+import { Typography, Menu, Dropdown, Button } from "antd";
 import { DownOutlined } from "@ant-design/icons";
 
 const FiltersSection = ({ methods, categories, selectRows }) => {
@@ -42,6 +42,14 @@ const FiltersSection = ({ methods, categories, selectRows }) => {
       <CreateProduct categories={categories} />
 
       <UpdateProduct selectRows={selectRows} categories={categories} />
+
+      <Button
+        // onClick={}
+        type="primary"
+        style={{ marginTop: "15px" }}
+      >
+        Reset
+      </Button>
     </section>
   );
 };
