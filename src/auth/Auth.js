@@ -7,7 +7,7 @@ const Auth = ({ credentials }) => {
   return (
     <div className="auth">
       {credentials?.token.length > 0 ? (
-        <Logout />
+        <Logout setToken={credentials.setToken} />
       ) : (
         <Login setToken={credentials.setToken} />
       )}
