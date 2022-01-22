@@ -61,7 +61,6 @@ const UpdateProduct = (props) => {
       );
     handleCloseDrawer();
   };
-  console.log(props);
   return (
     <Tooltip
       placement="topLeft"
