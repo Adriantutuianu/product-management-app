@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./antd.css";
 import "./App.css";
@@ -12,12 +12,12 @@ import About from "./routes/About";
 
 function App() {
   const { Content } = Layout;
-
+  const [token, setToken] = useState("");
   return (
     <Router>
       <div className="App">
         <Layout className="app-layout">
-          <Header />
+          <Header credentials={{ token, setToken }} />
           <Content style={{ height: "100%" }}>
             <Routes>
               <Route path="/" element={<Products />} />

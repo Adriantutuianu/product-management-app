@@ -3,10 +3,10 @@ import "./auth.css";
 import Login from "./Login";
 import Logout from "./Logout";
 
-const Auth = () => {
+const Auth = ({ credentials }) => {
   return (
     <div className="auth">
-      <Login />
+      <Login setToken={credentials.setToken} />
       <Logout />
     </div>
   );
