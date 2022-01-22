@@ -6,8 +6,11 @@ import Logout from "./Logout";
 const Auth = ({ credentials }) => {
   return (
     <div className="auth">
-      <Login setToken={credentials.setToken} />
-      <Logout />
+      {credentials?.token.length > 0 ? (
+        <Logout />
+      ) : (
+        <Login setToken={credentials.setToken} />
+      )}
     </div>
   );
 };
