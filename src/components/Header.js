@@ -4,8 +4,7 @@ import "./header.css";
 import Auth from "../auth/Auth.js";
 import { Link } from "react-router-dom";
 
-//
-const Header = () => {
+const Header = ({ credentials }) => {
   return (
     <header>
       <section style={{ display: "flex" }}>
@@ -35,7 +34,7 @@ const Header = () => {
           </Menu.Item>
         </Menu>
       </section>
-      <Auth />
+      <Auth credentials={credentials} />
     </header>
   );
 };

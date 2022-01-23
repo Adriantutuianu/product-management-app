@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Modal, Button, Input, Typography } from "antd";
 import { EyeInvisibleOutlined, EyeTwoTone } from "@ant-design/icons";
 
-const Login = () => {
+const Login = ({ setToken }) => {
   const [isModalVisible, setIsModalVisible] = useState(false);
   const [usernameInputValue, setUsernameInputValue] = useState("");
   const [passwordInputValue, setPasswordInputValue] = useState("");
@@ -45,7 +45,7 @@ const Login = () => {
         }),
       })
         .then((res) => res.json())
-        .then((json) => console.log(json));
+        .then((json) => setToken(json.token));
     } catch (error) {
       console.log(error);
     }

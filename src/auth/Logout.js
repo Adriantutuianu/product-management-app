@@ -1,10 +1,16 @@
 import React from "react";
-import { Button } from "antd";
+import { Button, notification } from "antd";
 
-const Logout = () => {
+const Logout = ({ setToken }) => {
   const handleClickLogout = () => {
+    setToken("");
+    notification.open({
+      message: `Authentication`,
+      description: "You have been logged out!",
+    });
     console.log("You have been logged out!");
   };
+
   return (
     <Button type="primary" onClick={handleClickLogout}>
       Logout

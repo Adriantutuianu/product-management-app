@@ -3,11 +3,14 @@ import "./auth.css";
 import Login from "./Login";
 import Logout from "./Logout";
 
-const Auth = () => {
+const Auth = ({ credentials }) => {
   return (
     <div className="auth">
-      <Login />
-      <Logout />
+      {credentials?.token.length > 0 ? (
+        <Logout setToken={credentials.setToken} />
+      ) : (
+        <Login setToken={credentials.setToken} />
+      )}
     </div>
   );
 };
