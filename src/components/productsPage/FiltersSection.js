@@ -41,7 +41,7 @@ const FiltersSection = ({ methods, categories, selectRows }) => {
         </a>
       </Dropdown>
       <Button
-        onClick={getProducts("https://fakestoreapi.com/products")}
+        onClick={() => getProducts("https://fakestoreapi.com/products")}
         type="primary"
         style={{ marginTop: "15px" }}
       >
