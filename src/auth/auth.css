@@ -1,6 +1,7 @@
 .auth {
   display: flex;
   align-items: center;
+  margin-right: 20px;
 }
 
 .login-modal .ant-modal-body {
