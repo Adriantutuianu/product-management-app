@@ -13,7 +13,6 @@ const Login = ({ setToken }) => {
 
   const handleOk = () => {
     loginUser();
-    setIsModalVisible(false);
     setUsernameInputValue("");
     setPasswordInputValue("");
   };
@@ -48,6 +47,11 @@ const Login = ({ setToken }) => {
         .then((json) => {
           if (json.token) {
             setToken(json.token);
+            setIsModalVisible(false);
+            notification.open({
+              message: `Successfully logged in`,
+              description: "You have been logged in. Enjoy!",
+            });
           } else {
             notification.open({
               message: `Error`,
