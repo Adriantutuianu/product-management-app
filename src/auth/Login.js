@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Modal, Button, Input, Typography } from "antd";
+import { Modal, Button, Input, Typography, notification } from "antd";
 import { EyeInvisibleOutlined, EyeTwoTone } from "@ant-design/icons";
 
 const Login = ({ setToken }) => {
@@ -45,7 +45,16 @@ const Login = ({ setToken }) => {
         }),
       })
         .then((res) => res.json())
-        .then((json) => setToken(json.token));
+        .then((json) => {
+          if (json.token) {
+            setToken(json.token);
+          } else {
+            notification.open({
+              message: `Error`,
+              description: json.msg,
+            });
+          }
+        });
     } catch (error) {
       console.log(error);
     }
