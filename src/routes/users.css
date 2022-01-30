@@ -1,5 +1,6 @@
 .users-table {
-  margin: 5px 5px 20px 5px;
+  margin: 30px auto 20px auto;
   border: 1px solid var(--primary-color);
   border-radius: 8px;
+  max-width: 800px;
 }
