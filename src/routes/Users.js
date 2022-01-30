@@ -1,6 +1,7 @@
 import React from "react";
 import TitleComp from "../components/Title";
 import { Table } from "antd";
+import "./users.css";
 
 const Users = () => {
   const columns = [
