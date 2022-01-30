@@ -4,3 +4,7 @@
   border-radius: 8px;
   max-width: 800px;
 }
+
+.ant-table-thead {
+  height: 50px;
+}
