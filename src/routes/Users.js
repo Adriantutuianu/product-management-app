@@ -13,7 +13,6 @@ const Users = () => {
       key: "id",
       width: 50,
     },
-
     {
       title: "Name",
       dataIndex: "name",
@@ -65,7 +64,7 @@ const Users = () => {
   useEffect(() => {
     getUsers();
   }, []);
-  console.log(users);
+
   return (
     <>
       <TitleComp title="Users" />

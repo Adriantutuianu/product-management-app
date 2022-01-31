@@ -9,10 +9,12 @@ import Products from "./routes/Products";
 import Categories from "./routes/Categories";
 import Users from "./routes/Users";
 import About from "./routes/About";
+import NotLoggedIn from "./components/NotLoggedIn";
 
 function App() {
   const { Content } = Layout;
   const [token, setToken] = useState("");
+
   return (
     <Router>
       <div className="App">
@@ -20,9 +22,13 @@ function App() {
           <Header credentials={{ token, setToken }} />
           <Content style={{ height: "100%" }}>
             <Routes>
-              <Route path="/" element={<Products />} />
-              <Route path="/categories" element={<Categories />} />
-              <Route path="/users" element={<Users />} />
+              <Route
+                path="/"
+                element={token ? <Products /> : <NotLoggedIn />}
+              />
+
+              {token && <Route path="/categories" element={<Categories />} />}
+              {token && <Route path="/users" element={<Users />} />}
               <Route path="/about" element={<About />} />
             </Routes>
           </Content>
