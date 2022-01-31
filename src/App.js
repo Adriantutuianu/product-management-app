@@ -10,6 +10,7 @@ import Categories from "./routes/Categories";
 import Users from "./routes/Users";
 import About from "./routes/About";
 import NotLoggedIn from "./components/NotLoggedIn";
+import NotFoundRoute from "./routes/NotFoundRoute";
 
 function App() {
   const { Content } = Layout;
@@ -30,6 +31,7 @@ function App() {
               {token && <Route path="/categories" element={<Categories />} />}
               {token && <Route path="/users" element={<Users />} />}
               <Route path="/about" element={<About />} />
+              <Route path="*" element={<NotFoundRoute />} />
             </Routes>
           </Content>
           <Footer />
