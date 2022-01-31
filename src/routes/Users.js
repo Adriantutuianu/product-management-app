@@ -13,16 +13,17 @@ const Users = () => {
       key: "id",
       width: 50,
     },
-    {
-      title: "User",
-      dataIndex: "username",
-      key: "username",
-    },
+
     {
       title: "Name",
       dataIndex: "name",
       key: "name",
       render: (text, record) => `${text.firstname}, ${text.lastname}`,
+    },
+    {
+      title: "User",
+      dataIndex: "username",
+      key: "username",
     },
     {
       title: "Password",
