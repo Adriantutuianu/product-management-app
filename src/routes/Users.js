@@ -9,6 +9,7 @@ const Users = () => {
       title: "Id",
       dataIndex: "id",
       key: "id",
+      width: 50,
     },
     {
       title: "User",
