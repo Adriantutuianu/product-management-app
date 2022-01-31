@@ -4,6 +4,8 @@ import { Table } from "antd";
 import "./users.css";
 
 const Users = () => {
+  const [users, setUsers] = useState([]);
+
   const columns = [
     {
       title: "Id",
@@ -13,8 +15,13 @@ const Users = () => {
     },
     {
       title: "User",
-      dataIndex: "user",
-      key: "user",
+      dataIndex: "username",
+      key: "username",
+    },
+    {
+      title: "Email",
+      dataIndex: "email",
+      key: "email",
     },
   ];
 
@@ -22,7 +29,10 @@ const Users = () => {
     try {
       await fetch("https://fakestoreapi.com/users")
         .then((res) => res.json())
-        .then((json) => console.log(json));
+        .then((res) => {
+          const resWithKey = res.map((obj) => ({ ...obj, key: obj.id }));
+          setUsers(resWithKey);
+        });
     } catch (error) {
       console.log("Failed to get all users: " + error);
     }
@@ -31,7 +41,7 @@ const Users = () => {
   useEffect(() => {
     getUsers();
   }, []);
-
+  console.log(users);
   return (
     <>
       <TitleComp title="Users" />
@@ -39,6 +49,7 @@ const Users = () => {
         className="users-table"
         columns={columns}
         pagination={{ pageSize: 10 }}
+        dataSource={users}
       />
     </>
   );
