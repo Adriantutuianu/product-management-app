@@ -23,6 +23,13 @@ const Users = () => {
       dataIndex: "email",
       key: "email",
     },
+    {
+      title: "Address",
+      dataIndex: "address",
+      key: "address",
+      render: (text, record) =>
+        `${text.number}, ${text.street}, ${text.city}, ${text.zipcode} `,
+    },
   ];
 
   const getUsers = async () => {
