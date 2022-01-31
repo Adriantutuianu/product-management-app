@@ -96,11 +96,11 @@ const Login = ({ setToken }) => {
         />
         <Paragraph
           type="secondary"
-          style={{ fontSize: "8px", margin: "15px 0 0px" }}
+          style={{ fontSize: "12px", margin: "15px 0 0px" }}
         >
           We are using a fake API. You can use the following credentials:
         </Paragraph>
-        <Paragraph type="secondary" style={{ fontSize: "8px" }}>
+        <Paragraph type="secondary" style={{ fontSize: "12px" }}>
           User: johnd / Password: m38rmF$
         </Paragraph>
       </Modal>
