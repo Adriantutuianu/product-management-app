@@ -19,9 +19,15 @@ const Users = () => {
       key: "username",
     },
     {
-      title: "Email",
-      dataIndex: "email",
-      key: "email",
+      title: "Name",
+      dataIndex: "name",
+      key: "name",
+      render: (text, record) => `${text.firstname}, ${text.lastname}`,
+    },
+    {
+      title: "Password",
+      dataIndex: "password",
+      key: "password",
     },
     {
       title: "Address",
@@ -29,6 +35,16 @@ const Users = () => {
       key: "address",
       render: (text, record) =>
         `${text.number}, ${text.street}, ${text.city}, ${text.zipcode} `,
+    },
+    {
+      title: "Phone",
+      dataIndex: "phone",
+      key: "phone",
+    },
+    {
+      title: "Email",
+      dataIndex: "email",
+      key: "email",
     },
   ];
 
