@@ -3,71 +3,50 @@ import "./about.css";
 import { Typography } from "antd";
 import TitleComp from "../components/Title";
 
-const { Paragraph, Text } = Typography;
+const { Paragraph } = Typography;
 
 const About = () => {
   return (
     <div className="about">
       <TitleComp title="About" />
-      <Paragraph>
-        <Text strong>
-          This is a CRUD APP. A CRUD app is a specific type of software
-          application that consists of four basic operations; Create, Read,
-          Update, Delete.
-        </Text>
-      </Paragraph>
-      <Paragraph>
-        <ul>
-          <li>
-            {" "}
-            <Text>
-              Create allows you to add new rows/records to a database/table. If
-              the record does not exist, the create operation adds it to the
-              database.
-            </Text>
-          </li>
-          <li>
-            {" "}
-            <Text>
-              Read is the operation that allows us to see the recipe we just
-              created. It does not alter data. It simply displays it. Read
-              consists of a function that queries our database and fetches all
-              our records, in this case, recipes. We can tailor our queries to
-              pull back all recipes, or only recipes of a particular type (for
-              example,, vegan recipes). We can also pull back a single recipe if
-              we have a UID (unique identifier).
-            </Text>
-          </li>
-          <li>
-            <Text>
-              Update is the operation that allows us to modify existing data and
-              records within a table. We can update a single field within a
-              record or multiple fields at once. It is also possible to update
-              multiple records at once too.
-            </Text>
-          </li>
-          <li>
-            <Text>
-              Delete is the operation that allows us to remove records from a
-              table.
-            </Text>
-          </li>
-        </ul>
-      </Paragraph>
-      <Paragraph>
-        <Text strong>
-          This page is build using a fake API and it's not going to make any
-          change in the database.
-        </Text>
-      </Paragraph>
-      <Paragraph>
+
+      <ul>
         {" "}
-        <Text strong>
-          FakeStoreApi is a free online REST API that you can use whenever you
-          need Pseudo-real data for your e-commerce or shopping website without
-          running any server-side code. It's awesome for teaching purposes,
-          sample codes, tests, etc.
-        </Text>
+        <Paragraph>
+          Project Management App is a SPA (Single Page Application) built in
+          React that will have the following functionalities:
+        </Paragraph>
+        <li> Routing (React Router v6)</li>
+        <li> Authentication</li>
+        <li> Pagination</li>
+        <li> Filters & sorting</li>
+        <li> Create new product</li>
+        <li> Update product</li>
+        <li> Delete product</li>
+      </ul>
+      <Paragraph>
+        This is a CRUD APP. A CRUD app is a specific type of software
+        application that consists of four basic operations; Create, Read,
+        Update, Delete.
+      </Paragraph>
+
+      <Paragraph>
+        The Product Management application was built using a fake API and it's
+        not going to make any changes in the database.
+      </Paragraph>
+
+      <Paragraph>
+        FakeStoreApi is a free online REST API that you can use whenever you
+        need Pseudo-real data for your e-commerce or shopping website without
+        running any server-side code. It's awesome for teaching purposes, sample
+        codes, tests, etc.
+      </Paragraph>
+
+      <Paragraph>To build the app I have used Ant Design UI Kit.</Paragraph>
+
+      <Paragraph>
+        Also I have used Github Issues (as a Jira story) to organize and created
+        separate branch for each feature.
       </Paragraph>
     </div>
   );
