@@ -14,7 +14,11 @@ const NotLoggedIn = () => {
       }}
     >
       <img
-        style={{ width: "60px", marginRight: "20px" }}
+        style={{
+          width: "60px",
+          marginRight: "20px",
+          animation: "spin 4s infinite linear",
+        }}
         src={process.env.PUBLIC_URL + "/gear.png"}
         alt="gear"
       />
