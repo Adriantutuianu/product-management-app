@@ -5,14 +5,18 @@ const { Text } = Typography;
 
 const NotLoggedIn = () => {
   return (
-    <div>
-      <Text
-        strong
-        style={{ fontSize: "20px", display: "flex", alignItems: "center" }}
-      >
-        Please login first.
-      </Text>
-    </div>
+    <Text
+      strong
+      style={{
+        fontSize: "24px",
+        height: "calc(100vh - 120px)",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+      }}
+    >
+      Please login first.
+    </Text>
   );
 };
 
