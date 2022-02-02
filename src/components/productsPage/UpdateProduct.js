@@ -38,7 +38,7 @@ const UpdateProduct = (props) => {
     </Option>
   ));
 
-  const updateProductEndpoint = `https://fakestoreapi.com/products/${props?.selectRows[0]?.id}`;
+  const updateProductEndpoint = `${process.env.REACT_APP_BASE_URL}/products/${props?.selectRows[0]?.id}`;
 
   const handleClickSubmit = () => {
     fetch(updateProductEndpoint, {

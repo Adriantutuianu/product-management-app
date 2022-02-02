@@ -9,14 +9,14 @@ const Products = () => {
   const [categories, setCategories] = useState([]);
   const [selectRows, setSelectRows] = useState([]);
 
-  const productsEndpoint = "https://fakestoreapi.com/products";
-  const categoriesEndpoint = "https://fakestoreapi.com/products/categories";
+  const productsEndpoint = `${process.env.REACT_APP_BASE_URL}/products`;
+  const categoriesEndpoint = `${process.env.REACT_APP_BASE_URL}/products/categories`;
 
   useEffect(() => {
     //get product onload
-    getCategories(categoriesEndpoint);
     getProducts(productsEndpoint);
-  }, []);
+    getCategories(categoriesEndpoint);
+  }, [productsEndpoint, categoriesEndpoint]);
 
   const getProducts = async (path) => {
     try {

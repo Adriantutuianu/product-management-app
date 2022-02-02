@@ -17,12 +17,12 @@ const Categories = () => {
     }
   };
 
-  const categoriesEndpoint = "https://fakestoreapi.com/products/categories";
+  const categoriesEndpoint = `${process.env.REACT_APP_BASE_URL}/products/categories`;
 
   useEffect(() => {
     //get categories onload
     getCategories(categoriesEndpoint);
-  }, []);
+  }, [categoriesEndpoint]);
 
   return (
     <>
