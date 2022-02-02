@@ -2,6 +2,6 @@
 
 ## Setup
 
-Create an env.local file and stored the following variables:
+Create an env.local file and store the following variables:
 
 - REACT_APP_BASE_URL
