@@ -15,9 +15,9 @@ const NotFoundRoute = () => {
     >
       <img
         style={{
-          width: "60px",
-          marginRight: "20px",
-          animation: "spin 4s infinite linear",
+          width: "70px",
+          marginRight: "25px",
+          animation: "spin 3s infinite linear",
         }}
         src={process.env.PUBLIC_URL + "/gear.png"}
         alt="gear"
@@ -25,10 +25,10 @@ const NotFoundRoute = () => {
       <Text
         strong
         style={{
-          fontSize: "24px",
+          fontSize: "26px",
         }}
       >
-        Page does not exist.
+        Error. Page does not exist.
       </Text>
     </div>
   );
