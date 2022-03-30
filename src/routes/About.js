@@ -10,7 +10,7 @@ const About = () => {
     <div className="about">
       <TitleComp title="About" />
       <Paragraph>
-        Project Management App is a SPA (Single Page Application) built in React
+        Product Management App is a SPA (Single Page Application) built in React
         that will have the following functionalities:
       </Paragraph>
       <ul style={{ marginLeft: "30px" }}>
