@@ -1,20 +1,28 @@
 **_ Product Management App _**
 
 Product Management App is a SPA (Single Page Application) built in React that will have the following functionalities:
--Routing (React Router v6)
--Authentication
--Pagination
--Filters & sorting
--Create new product
--Update product
--Delete product
+-Routing (React Router v6)\
+-Authentication\
+-Pagination\
+-Filters & sorting\
+-Create new product\
+-Update product\
+-Delete product\
+
 This is a CRUD APP. A CRUD app is a specific type of software application that consists of four basic operations; Create, Read, Update, Delete.
+
 The Product Management application was built using a fake API and it's not going to make any changes in the database.
+
 FakeStoreApi is a free online REST API that you can use whenever you need Pseudo-real data for your e-commerce or shopping website without running any server-side code. It's awesome for teaching purposes, sample codes, tests, etc.
 To build the app I have used Ant Design UI Kit.
+
 Also I have used Github Issues (as a Jira story) to organize and created separate branch for each feature.
 
 ![Preview Image](preview-product-management-app.png)
+
+# Getting Started with Create React App
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
