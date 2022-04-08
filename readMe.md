@@ -24,6 +24,11 @@ Also I have used Github Issues (as a Jira story) to organize and created separat
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+# Installation:
+
+Create .env.local file and add base url variable:
+REACT_APP_BASE_URL=https://fakestoreapi.com
+
 ## Available Scripts
 
 In the project directory, you can run:
