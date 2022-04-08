@@ -26,7 +26,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 # Installation:
 
-Create .env.local file and add base url variable:
+Create .env.local file and add base url variable:\
 REACT_APP_BASE_URL=https://fakestoreapi.com
 
 ## Available Scripts
