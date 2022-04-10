@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import { Image } from "antd";
 
 const ProductDetails = () => {
   const [details, setDetails] = useState({});
 
   const { id } = useParams();
-  console.log(id);
+  console.log(details);
 
   useEffect(() => {
     const getDetails = async () => {
@@ -19,9 +20,14 @@ const ProductDetails = () => {
     };
 
     getDetails();
-  }, []);
+  }, [id]);
 
-  return <div> {id}</div>;
+  return (
+    <div className="product-details">
+      {" "}
+      <Image width={200} src={details.image} />
+    </div>
+  );
 };
 
 export default ProductDetails;
