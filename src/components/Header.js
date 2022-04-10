@@ -5,7 +5,6 @@ import Auth from "../auth/Auth.js";
 import { Link } from "react-router-dom";
 
 const Header = ({ credentials }) => {
-  console.log(credentials.token);
   return (
     <header>
       <section style={{ display: "flex" }}>
