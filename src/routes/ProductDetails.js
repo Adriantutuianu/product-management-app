@@ -26,6 +26,9 @@ const ProductDetails = () => {
     <div className="product-details">
       {" "}
       <Image width={200} src={details.image} />
+      {/* {details && details.rating && details.rating.rate} */}
+      {details?.rating?.rate}
+      {details?.rating?.count}
     </div>
   );
 };
