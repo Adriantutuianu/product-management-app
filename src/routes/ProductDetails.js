@@ -40,6 +40,10 @@ const ProductDetails = () => {
         Description: {details.description}
       </Descriptions.Item>
       <br />
+      <Descriptions.Item label="Category">
+        Category: {details.category}
+      </Descriptions.Item>
+      <br />
       <Descriptions.Item label="Image">
         Image: <Image width={200} src={details.image} />
       </Descriptions.Item>
