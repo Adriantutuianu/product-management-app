@@ -26,6 +26,7 @@ const ProductDetails = () => {
     <div className="product-details">
       {" "}
       <Descriptions title="Product details" layout="vertical"></Descriptions>
+      <Descriptions.Item label="ID:">Id: {details.id}</Descriptions.Item>
       <Image width={200} src={details.image} />
       {/* {details && details.rating && details.rating.rate} */}
       <Rate value={details?.rating?.rate} disabled={true} />
