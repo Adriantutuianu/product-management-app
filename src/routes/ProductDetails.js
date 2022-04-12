@@ -49,7 +49,9 @@ const ProductDetails = () => {
       </Descriptions.Item>
       <br />
       {/* {details && details.rating && details.rating.rate} */}
-      <Rate value={details?.rating?.rate} disabled={true} />
+      <Descriptions.Item label="Rating">
+        Rating: <Rate value={details?.rating?.rate} disabled={true} />
+      </Descriptions.Item>
     </div>
   );
 };
