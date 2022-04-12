@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { Image, Rate } from "antd";
+import { Image, Rate, Descriptions } from "antd";
 
 const ProductDetails = () => {
   const [details, setDetails] = useState({});
@@ -25,6 +25,7 @@ const ProductDetails = () => {
   return (
     <div className="product-details">
       {" "}
+      <Descriptions title="Product details" layout="vertical"></Descriptions>
       <Image width={200} src={details.image} />
       {/* {details && details.rating && details.rating.rate} */}
       <Rate value={details?.rating?.rate} disabled={true} />
