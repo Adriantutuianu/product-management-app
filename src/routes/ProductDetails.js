@@ -40,7 +40,10 @@ const ProductDetails = () => {
         Description: {details.description}
       </Descriptions.Item>
       <br />
-      {/* <Image width={200} src={details.image} /> */}
+      <Descriptions.Item label="Image">
+        Image: <Image width={200} src={details.image} />
+      </Descriptions.Item>
+      <br />
       {/* {details && details.rating && details.rating.rate} */}
       <Rate value={details?.rating?.rate} disabled={true} />
     </div>
