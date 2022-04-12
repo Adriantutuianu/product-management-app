@@ -24,6 +24,14 @@ const ProductDetails = () => {
     getDetails();
   }, [id]);
 
+  const calculateIdType = (id) => {
+    if (id % 2 === 0) {
+      return "The id is EVEN.";
+    } else {
+      return "The id is ODD.";
+    }
+  };
+
   return (
     <div className="product-details">
       {" "}
@@ -44,6 +52,9 @@ const ProductDetails = () => {
         {/* {details && details.rating && details.rating.rate} */}
         <Descriptions.Item label="Rating">
           <Rate value={details?.rating?.rate} disabled={true} />
+        </Descriptions.Item>
+        <Descriptions.Item label="Text">
+          {calculateIdType(details.id)}
         </Descriptions.Item>
       </Descriptions>
     </div>
