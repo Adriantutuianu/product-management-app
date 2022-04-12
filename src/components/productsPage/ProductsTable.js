@@ -1,5 +1,6 @@
 import React from "react";
 import { Table } from "antd";
+import { Link } from "react-router-dom";
 
 const ProductsTable = ({ productsProp, setSelectRows }) => {
   const columns = [
@@ -7,6 +8,7 @@ const ProductsTable = ({ productsProp, setSelectRows }) => {
       title: "Id",
       dataIndex: "id",
       key: "id",
+      render: (id) => <Link to={`/product/${id}`}>{id}</Link>,
     },
     {
       title: "Title",

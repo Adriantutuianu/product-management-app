@@ -1,0 +1,7 @@
+.product-details {
+  padding: 20px;
+}
+
+.product-details .ant-descriptions-item-content::first-letter {
+  text-transform: capitalize;
+}

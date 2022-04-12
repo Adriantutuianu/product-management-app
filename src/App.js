@@ -11,6 +11,7 @@ import Users from "./routes/Users";
 import About from "./routes/About";
 import NotLoggedIn from "./components/NotLoggedIn";
 import NotFoundRoute from "./routes/NotFoundRoute";
+import ProductDetails from "./routes/ProductDetails";
 
 function App() {
   const { Content } = Layout;
@@ -27,7 +28,9 @@ function App() {
                 path="/"
                 element={token ? <Products /> : <NotLoggedIn />}
               />
-
+              {token && (
+                <Route path="/product/:id" element={<ProductDetails />} />
+              )}
               {token && <Route path="/categories" element={<Categories />} />}
               {token && <Route path="/users" element={<Users />} />}
               <Route path="/about" element={<About />} />
