@@ -25,9 +25,22 @@ const ProductDetails = () => {
   return (
     <div className="product-details">
       {" "}
-      <Descriptions title="Product details" layout="vertical"></Descriptions>
-      <Descriptions.Item label="ID:">Id: {details.id}</Descriptions.Item>
-      <Image width={200} src={details.image} />
+      <Descriptions
+        title="Product details"
+        layout="vertical"
+        bordered
+      ></Descriptions>
+      <Descriptions.Item label="ID">Id: {details.id}</Descriptions.Item>
+      <br />
+      <Descriptions.Item label="Title">
+        Title: {details.title}
+      </Descriptions.Item>
+      <br />
+      <Descriptions.Item label="Description">
+        Description: {details.description}
+      </Descriptions.Item>
+      <br />
+      {/* <Image width={200} src={details.image} /> */}
       {/* {details && details.rating && details.rating.rate} */}
       <Rate value={details?.rating?.rate} disabled={true} />
     </div>
