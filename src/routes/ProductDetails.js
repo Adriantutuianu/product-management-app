@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { Image, Rate, Descriptions } from "antd";
 import "./productsDetails.css";
+import TitleComp from "../components/Title";
 
 const ProductDetails = () => {
   const [details, setDetails] = useState({});
@@ -26,7 +27,8 @@ const ProductDetails = () => {
   return (
     <div className="product-details">
       {" "}
-      <Descriptions title="Product details" layout="vertical" bordered>
+      <TitleComp title="Product details" />
+      <Descriptions layout="vertical" bordered>
         <Descriptions.Item label="ID"> {details.id}</Descriptions.Item>
         <Descriptions.Item label="Title">{details.title}</Descriptions.Item>
         <Descriptions.Item label="Description">
