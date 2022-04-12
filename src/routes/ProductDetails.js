@@ -31,11 +31,12 @@ const ProductDetails = () => {
       <Descriptions layout="vertical" bordered>
         <Descriptions.Item label="ID"> {details.id}</Descriptions.Item>
         <Descriptions.Item label="Title">{details.title}</Descriptions.Item>
-        <Descriptions.Item label="Description">
-          {details.description}
-        </Descriptions.Item>
+
         <Descriptions.Item label="Category">
           {details.category}
+        </Descriptions.Item>
+        <Descriptions.Item label="Description" span={3}>
+          {details.description}
         </Descriptions.Item>
         <Descriptions.Item label="Image">
           <Image width={100} src={details.image} />
