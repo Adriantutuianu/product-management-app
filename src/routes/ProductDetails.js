@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { Image, Rate, Descriptions } from "antd";
+import { Image, Rate, Descriptions, Button } from "antd";
 import "./productsDetails.css";
 import TitleComp from "../components/Title";
+import { ArrowLeftOutlined } from "@ant-design/icons";
 
 const ProductDetails = () => {
   const [details, setDetails] = useState({});
@@ -57,6 +58,9 @@ const ProductDetails = () => {
           {calculateIdType(details.id)}
         </Descriptions.Item>
       </Descriptions>
+      <Button type="primary" style={{ marginTop: "20px" }}>
+        <ArrowLeftOutlined /> Return to products dashboard
+      </Button>
     </div>
   );
 };
