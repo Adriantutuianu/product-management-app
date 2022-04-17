@@ -4,6 +4,7 @@ import { Image, Rate, Descriptions, Button } from "antd";
 import "./productsDetails.css";
 import TitleComp from "../components/Title";
 import { ArrowLeftOutlined } from "@ant-design/icons";
+import { Link } from "react-router-dom";
 
 const ProductDetails = () => {
   const [details, setDetails] = useState({});
@@ -58,8 +59,11 @@ const ProductDetails = () => {
           {calculateIdType(details.id)}
         </Descriptions.Item>
       </Descriptions>
-      <Button type="primary" style={{ marginTop: "20px" }}>
-        <ArrowLeftOutlined /> Return to products dashboard
+      <Button style={{ marginTop: "20px" }}>
+        <Link to="/">
+          {" "}
+          <ArrowLeftOutlined /> Return to products dashboard
+        </Link>{" "}
       </Button>
     </div>
   );
