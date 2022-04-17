@@ -66,6 +66,12 @@ const Login = ({ setToken }) => {
 
   const { Paragraph } = Typography;
 
+  const fillInputs = (e) => {
+    e.preventDefault();
+    setUsernameInputValue("johnd");
+    setPasswordInputValue("m38rmF$");
+  };
+
   return (
     <>
       <Button type="primary" onClick={showModal}>
@@ -103,6 +109,9 @@ const Login = ({ setToken }) => {
         <Paragraph type="secondary" style={{ fontSize: "12px" }}>
           User: johnd / Password: m38rmF$
         </Paragraph>
+        <Button onClick={(e) => fillInputs(e)} type="danger">
+          Fill them for me :){" "}
+        </Button>
       </Modal>
     </>
   );

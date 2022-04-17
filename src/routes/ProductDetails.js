@@ -10,7 +10,6 @@ const ProductDetails = () => {
   const [details, setDetails] = useState({});
 
   const { id } = useParams();
-  console.log(details);
 
   useEffect(() => {
     const getDetails = async () => {
