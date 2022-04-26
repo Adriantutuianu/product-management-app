@@ -109,8 +109,12 @@ const Login = ({ setToken }) => {
         <Paragraph type="secondary" style={{ fontSize: "12px" }}>
           User: johnd / Password: m38rmF$
         </Paragraph>
-        <Button onClick={(e) => fillInputs(e)} type="danger">
-          Fill them for me :){" "}
+        <Button
+          style={{ marginBottom: "15px" }}
+          onClick={(e) => fillInputs(e)}
+          type="danger"
+        >
+          Fill them for me 😊{" "}
         </Button>
       </Modal>
     </>
