@@ -54,7 +54,7 @@ const ProductDetails = () => {
         <Descriptions.Item label="Rating">
           <Rate value={details?.rating?.rate} disabled={true} />
         </Descriptions.Item>
-        <Descriptions.Item label="Text">
+        <Descriptions.Item label="How is the id?">
           {calculateIdType(details.id)}
         </Descriptions.Item>
       </Descriptions>
