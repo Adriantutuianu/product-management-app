@@ -8,6 +8,7 @@ const Products = () => {
   const [products, setProducts] = useState([]);
   const [categories, setCategories] = useState([]);
   const [selectRows, setSelectRows] = useState([]);
+  const [loading, setLoading] = useState(false);
 
   const productsEndpoint = `${process.env.REACT_APP_BASE_URL}/products`;
   const categoriesEndpoint = `${process.env.REACT_APP_BASE_URL}/products/categories`;
@@ -19,6 +20,7 @@ const Products = () => {
   }, [productsEndpoint, categoriesEndpoint]);
 
   const getProducts = async (path) => {
+    setLoading(true);
     try {
       await fetch(path)
         .then((res) => res.json())
@@ -30,6 +32,7 @@ const Products = () => {
     } catch (error) {
       console.log("Failed to get all products: " + error);
     }
+    setLoading(false);
   };
 
   const getCategories = async (path) => {
@@ -59,7 +62,11 @@ const Products = () => {
         }}
         categories={categories}
       />
-      <ProductsTable productsProp={products} setSelectRows={setSelectRows} />
+      <ProductsTable
+        loading={loading}
+        productsProp={products}
+        setSelectRows={setSelectRows}
+      />
     </>
   );
 };
