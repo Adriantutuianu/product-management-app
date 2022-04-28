@@ -8,7 +8,7 @@ import { DownOutlined } from "@ant-design/icons";
 const FiltersSection = ({ methods, categories, selectRows, isResetActive }) => {
   const { Title } = Typography;
 
-  const { handleClickCategoriesFilter, getProducts } = methods;
+  const { handleClickCategoriesFilter, resetCategoriesFilter } = methods;
 
   // dynamic menu options
   const menuItems = categories.map((category, index) => (
@@ -41,7 +41,7 @@ const FiltersSection = ({ methods, categories, selectRows, isResetActive }) => {
         </a>
       </Dropdown>
       <Button
-        onClick={() => getProducts("https://fakestoreapi.com/products")}
+        onClick={resetCategoriesFilter}
         type="primary"
         disabled={isResetActive ? false : true}
         style={{ marginTop: "15px" }}
