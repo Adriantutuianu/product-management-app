@@ -4,8 +4,10 @@ import { List } from "antd";
 
 const Categories = () => {
   const [categories, setCategories] = useState([]);
+  const [loading, setLoading] = useState(false);
 
   const getCategories = async (path) => {
+    setLoading(true);
     try {
       await fetch(path)
         .then((res) => res.json())
@@ -15,6 +17,7 @@ const Categories = () => {
     } catch (error) {
       console.log("Failed to get all products: " + error);
     }
+    setLoading(false);
   };
 
   const categoriesEndpoint = `${process.env.REACT_APP_BASE_URL}/products/categories`;
@@ -28,6 +31,7 @@ const Categories = () => {
     <>
       <TitleComp title="Categories" />
       <List
+        loading={loading}
         size="large"
         bordered
         dataSource={categories}
