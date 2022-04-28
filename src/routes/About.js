@@ -42,6 +42,10 @@ const About = () => {
         Also I have used Github Issues (as a Jira story) to organize and created
         separate branch for each feature.
       </Paragraph>
+      <Paragraph>
+        All data is being fetched from https://fakestoreapi.com. This is an fake
+        API and new data will not be stored.
+      </Paragraph>
     </div>
   );
 };
