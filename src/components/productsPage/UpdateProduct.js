@@ -74,12 +74,12 @@ const UpdateProduct = (props) => {
     >
       <Button
         type="primary"
+        loading={visible}
         disabled={props.selectRows.length !== 1}
         onClick={handleClickUpdateProduct}
       >
         Update product
       </Button>
-
       {visible && (
         <Drawer
           title={`Update Product #${props.selectRows[0].id}:`}
