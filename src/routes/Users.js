@@ -5,6 +5,7 @@ import "./users.css";
 
 const Users = () => {
   const [users, setUsers] = useState([]);
+  const [loading, setLoading] = useState(false);
 
   const columns = [
     {
@@ -49,6 +50,7 @@ const Users = () => {
   ];
 
   const getUsers = async () => {
+    setLoading(true);
     try {
       await fetch("https://fakestoreapi.com/users")
         .then((res) => res.json())
@@ -59,6 +61,7 @@ const Users = () => {
     } catch (error) {
       console.log("Failed to get all users: " + error);
     }
+    setLoading(false);
   };
 
   useEffect(() => {
@@ -69,6 +72,7 @@ const Users = () => {
     <>
       <TitleComp title="Users" />
       <Table
+        loading={loading}
         className="users-table"
         columns={columns}
         pagination={{ pageSize: 10 }}
