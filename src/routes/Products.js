@@ -9,6 +9,7 @@ const Products = () => {
   const [categories, setCategories] = useState([]);
   const [selectRows, setSelectRows] = useState([]);
   const [loading, setLoading] = useState(false);
+  const [isResetActive, setIsActiveReset] = useState(false);
 
   const productsEndpoint = `${process.env.REACT_APP_BASE_URL}/products`;
   const categoriesEndpoint = `${process.env.REACT_APP_BASE_URL}/products/categories`;
@@ -49,6 +50,7 @@ const Products = () => {
   // Fetch all products with a specific category
   const handleClickCategoriesFilter = (category) => {
     getProducts(`https://fakestoreapi.com/products/category/${category}`);
+    setIsActiveReset(true);
   };
 
   return (
@@ -61,6 +63,7 @@ const Products = () => {
           getProducts,
         }}
         categories={categories}
+        isResetActive={isResetActive}
       />
       <ProductsTable
         loading={loading}

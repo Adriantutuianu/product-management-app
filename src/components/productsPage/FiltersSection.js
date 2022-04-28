@@ -5,7 +5,7 @@ import CreateProduct from "./CreateProduct";
 import { Typography, Menu, Dropdown, Button } from "antd";
 import { DownOutlined } from "@ant-design/icons";
 
-const FiltersSection = ({ methods, categories, selectRows }) => {
+const FiltersSection = ({ methods, categories, selectRows, isResetActive }) => {
   const { Title } = Typography;
 
   const { handleClickCategoriesFilter, getProducts } = methods;
@@ -43,6 +43,7 @@ const FiltersSection = ({ methods, categories, selectRows }) => {
       <Button
         onClick={() => getProducts("https://fakestoreapi.com/products")}
         type="primary"
+        disabled={isResetActive ? false : true}
         style={{ marginTop: "15px" }}
       >
         Reset
