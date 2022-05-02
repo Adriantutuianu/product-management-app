@@ -34,7 +34,7 @@ const ProductDetails = () => {
   };
 
   const calculateValue = (a, b) => {
-    const result = (a / b).toFixed(2);
+    const result = a / b;
     return result;
   };
   console.log(calculateValue);
@@ -63,7 +63,7 @@ const ProductDetails = () => {
           {calculateIdType(details.id)}
         </Descriptions.Item>
         <Descriptions.Item label="Value for money">
-          {calculateValue(details?.price, details?.rating?.rate)}
+          {calculateValue(details.price, details.rating.rate).toFixed(2)}
         </Descriptions.Item>
       </Descriptions>
       <Button style={{ marginTop: "20px" }}>
