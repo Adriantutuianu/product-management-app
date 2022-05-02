@@ -33,6 +33,11 @@ const ProductDetails = () => {
     }
   };
 
+  const calculateValue = (value) => {
+    value = details.price / details.rating.rate;
+    return value;
+  };
+
   return (
     <div className="product-details">
       {" "}
@@ -56,6 +61,9 @@ const ProductDetails = () => {
         </Descriptions.Item>
         <Descriptions.Item label="How is the id?">
           {calculateIdType(details.id)}
+        </Descriptions.Item>
+        <Descriptions.Item label="Value for money">
+          {calculateValue(details.value)}
         </Descriptions.Item>
       </Descriptions>
       <Button style={{ marginTop: "20px" }}>
