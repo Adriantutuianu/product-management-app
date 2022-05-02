@@ -33,11 +33,11 @@ const ProductDetails = () => {
     }
   };
 
-  const calculateValue = (value) => {
-    value = details.price / details.rating.rate;
-    return value;
+  const calculateValue = (a, b) => {
+    const result = (a / b).toFixed(2);
+    return result;
   };
-
+  console.log(calculateValue);
   return (
     <div className="product-details">
       {" "}
@@ -49,7 +49,7 @@ const ProductDetails = () => {
         <Descriptions.Item label="Category">
           {details.category}
         </Descriptions.Item>
-        <Descriptions.Item label="Description" span={3}>
+        <Descriptions.Item label="Description" span={2}>
           {details.description}
         </Descriptions.Item>
         <Descriptions.Item label="Image">
@@ -63,7 +63,7 @@ const ProductDetails = () => {
           {calculateIdType(details.id)}
         </Descriptions.Item>
         <Descriptions.Item label="Value for money">
-          {calculateValue(details.value)}
+          {calculateValue(details?.price, details?.rating?.rate)}
         </Descriptions.Item>
       </Descriptions>
       <Button style={{ marginTop: "20px" }}>
