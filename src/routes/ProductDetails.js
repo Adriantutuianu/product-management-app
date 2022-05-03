@@ -37,6 +37,12 @@ const ProductDetails = () => {
     const result = price / rate;
     return result;
   };
+
+  const ratingRatio = (count, rate) => {
+    const resultRatio = count / rate;
+    return resultRatio;
+  };
+
   return (
     <div className="product-details">
       {" "}
@@ -63,6 +69,11 @@ const ProductDetails = () => {
         </Descriptions.Item>
         <Descriptions.Item label="Value for money">
           {calculateValue(details.price, details?.rating?.rate).toFixed(2)}
+        </Descriptions.Item>
+        <Descriptions.Item label="Rating Ratio">
+          {ratingRatio(details?.rating?.count, details?.rating?.rate).toFixed(
+            1
+          )}
         </Descriptions.Item>
       </Descriptions>
       <Button style={{ marginTop: "20px" }}>
