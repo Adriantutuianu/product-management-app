@@ -54,7 +54,7 @@ const ProductDetails = () => {
         <Descriptions.Item label="Category">
           {details.category}
         </Descriptions.Item>
-        <Descriptions.Item label="Description" span={2}>
+        <Descriptions.Item label="Description" span={3}>
           {details.description}
         </Descriptions.Item>
         <Descriptions.Item label="Image">
