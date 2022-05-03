@@ -33,8 +33,8 @@ const ProductDetails = () => {
     }
   };
 
-  const calculateValue = (a, b) => {
-    const result = a / b;
+  const calculateValue = (price, rate) => {
+    const result = price / rate;
     return result;
   };
   console.log(calculateValue);
