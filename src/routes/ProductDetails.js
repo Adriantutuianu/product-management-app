@@ -37,7 +37,6 @@ const ProductDetails = () => {
     const result = price / rate;
     return result;
   };
-  console.log(calculateValue);
   return (
     <div className="product-details">
       {" "}

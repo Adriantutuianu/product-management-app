@@ -1,5 +1,5 @@
 import React from "react";
-import { Table } from "antd";
+import { Table, Tooltip } from "antd";
 import { Link } from "react-router-dom";
 
 const ProductsTable = ({ productsProp, setSelectRows, loading }) => {
@@ -8,8 +8,20 @@ const ProductsTable = ({ productsProp, setSelectRows, loading }) => {
       title: "Id",
       dataIndex: "id",
       key: "id",
-      render: (id) => <Link to={`/product/${id}`}>{id}</Link>,
+      render: (id) => (
+        <Link to={`/product/${id}`}>
+          {" "}
+          <Tooltip
+            placement="right"
+            title={"View project details"}
+            style={{ marginLeft: "15px" }}
+          >
+            {id}
+          </Tooltip>
+        </Link>
+      ),
     },
+
     {
       title: "Title",
       dataIndex: "title",
