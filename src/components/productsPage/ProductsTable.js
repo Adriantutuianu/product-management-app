@@ -13,7 +13,7 @@ const ProductsTable = ({ productsProp, setSelectRows, loading }) => {
           {" "}
           <Tooltip
             placement="right"
-            title={`View project ${id} details`}
+            title={`View details for project: ${id}`}
             style={{ marginLeft: "15px" }}
           >
             {id}
