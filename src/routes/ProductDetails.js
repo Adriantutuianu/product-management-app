@@ -63,7 +63,7 @@ const ProductDetails = () => {
           {calculateIdType(details.id)}
         </Descriptions.Item>
         <Descriptions.Item label="Value for money">
-          {calculateValue(details.price, details.rating.rate).toFixed(2)}
+          {calculateValue(details.price, details?.rating?.rate).toFixed(2)}
         </Descriptions.Item>
       </Descriptions>
       <Button style={{ marginTop: "20px" }}>
